@@ -1,0 +1,4 @@
+// 100 names: 1-50 women (ending at 'Skylar'), 50-100 men
+let list = 'Emma, Olivia, Ava, Isabella, Sophia, Charlotte, Mia, Amelia, Harper, Evelyn, Abigail, Emily, Elizabeth, Mila, Ella, Avery, Sofia, Camila, Aria, Scarlett, Victoria, Madison, Luna, Grace, Chloe, Penelope, Layla, Riley, Zoey, Nora, Lily, Eleanor, Hannah, Lillian, Addison, Aubrey, Ellie, Stella, Natalie, Zoe, Leah, Hazel, Violet, Aurora, Savannah, Audrey, Brooklyn, Bella, Claire, Skylar, Liam, Noah, William, James, Oliver, Benjamin, Elijah, Lucas, Mason, Logan, Alexander, Ethan, Jacob, Michael, Daniel, Henry, Jackson, Sebastian, Aiden, Matthew, Samuel, David, Joseph, Carter, Owen, Wyatt, John, Jack, Luke, Jayden, Dylan, Grayson, Levi, Issac, Gabriel, Julian, Mateo, Anthony, Jaxon, Lincoln, Joshua, Christopher, Andrew, Theodore, Caleb, Ryan, Asher, Nathan, Thomas, Leo'
+
+module.exports.list = list

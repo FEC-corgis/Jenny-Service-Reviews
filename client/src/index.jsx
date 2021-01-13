@@ -10,8 +10,7 @@ class App extends React.Component {
     }
   }
   componentDidMount() {
-    console.log('didmount up')
-    axios.post('/test', {test: 'test'})
+    axios('/test')
     .then(res =>{
       console.log(res.data)
     })
