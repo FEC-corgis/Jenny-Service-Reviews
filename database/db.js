@@ -4,6 +4,7 @@ const sequelize = new Sequelize({
   dialect: 'mysql',
   username: 'root',
   password: '',
+  database: 'fec_reviews',
 })
 
 sequelize.authenticate()

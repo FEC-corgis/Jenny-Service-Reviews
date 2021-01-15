@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start": "nodemon ./server/index.js",
-    "react-dev": "webpack --watch"
+    "react-dev": "webpack --watch",
+    "seed": "node database/seeding/seed.js"
   },
   "dependencies": {
     "axios": "^0.21.1",
