@@ -41,8 +41,9 @@ const Review = sequelize.define('Review', {
   accuracy: Sequelize.INTEGER,
   location: Sequelize.INTEGER,
   value: Sequelize.INTEGER,
+  overall: Sequelize.INTEGER,
   propertyId: Sequelize.INTEGER,
-  userId: Sequelize.INTEGER, // change to userId foreign key??
+  userId: Sequelize.INTEGER,
 }, { timestamps: false
 })
 
@@ -95,6 +96,7 @@ for (let i = 0; i < TOTAL_HOUSES; i++) {
             accuracy: review.ratings.accuracy,
             location: review.ratings.location,
             value: review.ratings.value,
+            overall: review.ratings.overall,
             propertyId: i,
             userId: randomUser,
             })
@@ -116,6 +118,7 @@ for (let i = 0; i < TOTAL_HOUSES; i++) {
             let avgAccuracySum = 0
             let avgLocationSum = 0
             let avgValueSum = 0
+            let avgOverallSum = 0
             for (let r = 0; r < TOTAL_REVIEWS; r++) {
               avgCleanlinessSum += data[r].cleanliness
               avgCommunicationSum += data[r].communication
@@ -123,6 +126,7 @@ for (let i = 0; i < TOTAL_HOUSES; i++) {
               avgAccuracySum += data[r].accuracy
               avgLocationSum += data[r].location
               avgValueSum += data[r].value
+              avgOverallSum += data[r].overall
             }
             let avgCleanliness = avgCleanlinessSum / TOTAL_REVIEWS
             let avgCommunication = avgCommunicationSum / TOTAL_REVIEWS
@@ -130,7 +134,7 @@ for (let i = 0; i < TOTAL_HOUSES; i++) {
             let avgAccuracy = avgAccuracySum / TOTAL_REVIEWS
             let avgLocation = avgLocationSum / TOTAL_REVIEWS
             let avgValue = avgValueSum / TOTAL_REVIEWS
-            let avgOverall = (avgCleanliness + avgCommunication + avgCheckIn + avgAccuracy + avgLocation + avgValue) / 6
+            let avgOverall = avgOverallSum / TOTAL_REVIEWS
 
             ReviewAvg.create({
                 avgCleanliness,

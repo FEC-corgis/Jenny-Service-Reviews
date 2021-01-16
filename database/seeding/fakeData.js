@@ -3,7 +3,7 @@ let nameList = require('./names.js')
 
 let ratings = function() {
   // min to max range inclusive: Math.floor(Math.random() * (max - min + 1)) + min
-  let metrics = ['cleanliness', 'communication', 'checkIn', 'accuracy', 'location', 'value']
+  let metrics = ['cleanliness', 'communication', 'checkIn', 'accuracy', 'location', 'value', 'overall']
   let allRatings = {}
   let max = 5.9
   let min = 2.5
