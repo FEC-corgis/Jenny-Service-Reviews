@@ -14,7 +14,6 @@ app.get('/propId/:id', (req, res) => {
       res.send(data)
     })
     .catch(err => console.log(err))
-  res.send(id)
 })
 
 app.listen(port, () => {

@@ -113,6 +113,7 @@ let top6 = function(id) {
   .then(() => {
     return allProps
   })
+  .catch(err => console.log(err))
 }
 
 module.exports = {
