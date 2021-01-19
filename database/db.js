@@ -7,9 +7,14 @@ const sequelize = new Sequelize({
   database: 'fec_reviews',
 })
 
-sequelize.authenticate()
-.then(() => console.log('Sequelize connected.'))
-.catch(err => console.error('Unable to connect Sequelize.', err))
+let startup = async () => {
+  try {
+    await sequelize.authenticate()
+    console.log('Sequelize connected.')
+  } catch(e) {
+    console.log('Unable to connect Sequelize', e)
+  }
+}
 
 const User = sequelize.define('User', {
   userId: {
@@ -63,57 +68,51 @@ const ReviewAvg = sequelize.define('ReviewAvg', {
 }, { timestamps: false
 })
 
-sequelize.sync() // need to sync each time if not seeding?
-.then(() => console.log('Tables synced.'))
-.catch(err => console.log(err))
+let execSync = async () => {
+  try {
+    await sequelize.sync() // need to sync each time if not seeding?
+    console.log('Tables synced.')
+  } catch(e) {
+    console.log(e)
+  }
+}
 
-let top6 = function(id) {
-  let allProps = {}
-  return ReviewAvg.findOne({
-    where: { propertyId: id },
-    raw: true,
-  })
-  .then(data => {
-    allProps.averages = data
-  })
-  .then(() => {
-    return Review.findAll({
+let top6 = async (id) => {
+  try {
+    let allProps = {}
+    let propAvg = await ReviewAvg.findOne({
       where: { propertyId: id },
       raw: true,
-      order: [
-        ['year', 'DESC'],
-        ['month', 'DESC'],
-      ],
-      limit: 6,
     })
-  })
-  .then(data => {
-    allProps.reviews6 = data
-    let userPromises = []
-    data.forEach(review => {
-      let user = User.findOne({
-        where: { userId: review.userId },
+      allProps.averages = propAvg
+      let propReviews = await Review.findAll({
+        where: { propertyId: id },
         raw: true,
+        order: [
+          ['year', 'DESC'],
+          ['month', 'DESC'],
+        ],
+        limit: 6,
       })
-      userPromises.push(user)
-    })
-    return Promise.all(userPromises)
-  })
-  .then(data => {
-    allProps.users = data
-  })
-  .then(() => {
-    return Review.count({
-      where: { propertyId: id },
-    })
-  })
-  .then(data => {
-    allProps.totalReviews = data
-  })
-  .then(() => {
-    return allProps
-  })
-  .catch(err => console.log(err))
+      allProps.reviews6 = propReviews
+      let userPromises = []
+      propReviews.forEach(review => {
+        let user = User.findOne({
+          where: { userId: review.userId },
+          raw: true,
+        })
+        userPromises.push(user)
+      })
+      let userArray = await Promise.all(userPromises)
+      allProps.users = userArray
+      let numReviews = await Review.count({
+        where: { propertyId: id },
+      })
+      allProps.totalReviews = numReviews
+      return allProps
+  } catch(e) {
+    console.log('DB ERROR', e)
+  }
 }
 
 module.exports = {

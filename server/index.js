@@ -7,13 +7,14 @@ app.use(express.static('./client/dist'))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
-app.get('/propId/:id', (req, res) => {
+app.get('/propId/:id', async (req, res) => {
   const id = req.params.id
-    return db.top6(id)
-    .then(data => {
-      res.send(data)
-    })
-    .catch(err => console.log(err))
+      try {
+        let data = await db.top6(id)
+        res.send(data)
+      } catch(e) {
+        console.log(e)
+      }
 })
 
 app.listen(port, () => {

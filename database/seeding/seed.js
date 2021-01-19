@@ -9,9 +9,14 @@ const sequelize = new Sequelize({
   database: 'fec_reviews',
 })
 
-sequelize.authenticate()
-.then(() => console.log('Sequelize connected.'))
-.catch(err => console.error('Unable to connect Sequelize.', err))
+let execAuth = async () => {
+  try {
+    await sequelize.authenticate()
+    console.log('Sequelize connected.')
+  } catch(e) {
+    console.error('Unable to connect Sequelize.', e)
+  }
+}
 
 const User = sequelize.define('User', {
   userId: {
