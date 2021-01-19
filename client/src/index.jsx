@@ -33,7 +33,7 @@ class App extends React.Component {
     return (
       <div class="container">
 
-        <div>
+        <div class="overall">
         {this.state.averages.avgOverall} ({this.state.totalReviews} reviews)
         </div>
 
