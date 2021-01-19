@@ -8,4 +8,24 @@
 .container-reviews {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.container-userReview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  "pic name"
+  "desc desc";
+}
+.pic {
+  grid-area: pic;
+}
+.name {
+  grid-area: name;
+}
+.desc {
+  grid-area: desc;
+}
+img {
+  border-radius: 50%;
 }
