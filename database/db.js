@@ -104,6 +104,7 @@ let top6 = async (id) => {
         userPromises.push(user)
       })
       let userArray = await Promise.all(userPromises)
+      console.log('user array test', userArray)
       allProps.users = userArray
       let numReviews = await Review.count({
         where: { propertyId: id },

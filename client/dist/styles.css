@@ -1,3 +1,5 @@
+/* FRONT PAGE */
+
 .container {
   display: grid;
   font-family: Arial, Helvetica, sans-serif;
@@ -5,13 +7,23 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+/* AVERAGES */
+
 .overall {
   font-size: 20px;
 }
 .container-avgs {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
 }
+.rating {
+  text-align: right;
+}
+
+/* REVIEWS */
+
 .container-reviews {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -36,4 +48,52 @@
 img {
   border-radius: 50%;
   height: 60px;
+}
+
+/* MODAL */
+
+.modalBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+.modalBody {
+  background-color: white;
+  border-radius: 5%;
+  width:80%;
+  height: 80%;
+  margin: 40px auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 40px;
+  grid-template-areas:
+  "modal-X modal-X"
+  "modal-avgs modal-search"
+  "modal-avgs modal-reviews";
+}
+.modal-X {
+  text-align: left;
+  top: 20px;
+  margin: 20px;
+  grid-area: modal-X;
+}
+.modal-avgs {
+  grid-area: modal-avgs;
+}
+.modal-search {
+  grid-area: modal-search;
+}
+.modal-reviews {
+  grid-area: modal-reviews;
+  overflow: scroll;
+}
+.modal-container-avgs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: left;
+  margin: 20px;
 }

@@ -21,7 +21,7 @@ class ReviewBlurb extends React.Component {
     }
   }
   render() {
-    console.log('users test', this.props)
+    // console.log('users test', this.props)
     return (
       <div class="container-userReview">
         <p></p>
