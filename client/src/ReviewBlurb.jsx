@@ -32,7 +32,7 @@ class ReviewBlurb extends React.Component {
         </div>
 
         <div class="name">
-        <br/>{this.props.users[this.props.review.userId]}
+        <br/>{this.props.users[this.props.review.userId + 1]}
         <br/> {this.state.months[this.props.review.month]} {this.props.review.year}
         </div>
 

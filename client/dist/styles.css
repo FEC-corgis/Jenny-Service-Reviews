@@ -41,6 +41,7 @@
 }
 .name {
   grid-area: name;
+  text-align: left;
 }
 .desc {
   grid-area: desc;

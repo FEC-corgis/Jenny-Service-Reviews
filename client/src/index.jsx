@@ -11,8 +11,9 @@ class App extends React.Component {
     this.state = {
       averages: '',
       reviews6: [],
+      reviewsAll: [],
       users: {},
-      totalReviews: '',
+      reviewCount: '',
       modal: false,
     }
     this.toggleModal = this.toggleModal.bind(this)
@@ -29,13 +30,17 @@ class App extends React.Component {
       let usersObj = {}
       res.data.users.forEach(user => {
           usersObj[user.userId] = user.name
-        }
       })
+      let top6 = []
+      for (let i = 0; i < 6; i++) {
+        top6.push(res.data.reviews[i])
+      }
       this.setState({
         averages: res.data.averages,
-        reviews6: res.data.reviews6,
+        reviews6: top6,
+        reviewsAll: res.data.reviews,
         users: usersObj,
-        totalReviews: res.data.totalReviews,
+        reviewCount: res.data.reviewCount,
       })
     })
   }
@@ -45,17 +50,29 @@ class App extends React.Component {
 
         <div>
         <p></p>
-        <button onClick={this.toggleModal}>Show all {this.state.totalReviews} reviews</button>
-        <Modal visible={this.state.modal} toggleModal={this.toggleModal} averages={this.state.averages} totalReviews={this.state.totalReviews} reviews6={this.state.reviews6} users={this.state.users}/>
+        <button onClick={this.toggleModal}>Show all {this.state.reviewCount} reviews</button>
+        <Modal
+        visible={this.state.modal}
+        toggleModal={this.toggleModal}
+        averages={this.state.averages}
+        reviewCount={this.state.reviewCount}
+        reviewsAll={this.state.reviewsAll}
+        users={this.state.users}/>
         </div>
 
           <p></p>
           <div>
-          <Averages averages={this.state.averages} totalReviews={this.state.totalReviews} />
+          <Averages
+          averages={this.state.averages}
+          reviewCount={this.state.reviewCount} />
           </div>
 
         <div class="container-reviews">
-        {this.state.reviews6.map(review => <ReviewBlurb review={review} users={this.state.users} /> )}
+        {this.state.reviews6.map(review =>
+        <ReviewBlurb
+        review={review}
+        users={this.state.users}
+        /> )}
         </div>
 
       </div>

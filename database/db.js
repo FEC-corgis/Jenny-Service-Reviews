@@ -77,7 +77,7 @@ let execSync = async () => {
   }
 }
 
-let top6 = async (id) => {
+let reviews50 = async (id) => {
   try {
     let allProps = {}
     let propAvg = await ReviewAvg.findOne({
@@ -92,24 +92,23 @@ let top6 = async (id) => {
           ['year', 'DESC'],
           ['month', 'DESC'],
         ],
-        limit: 6,
+        // limit: 6,
       })
-      allProps.reviews6 = propReviews
+      allProps.reviews = propReviews
       let userPromises = []
       propReviews.forEach(review => {
         let user = User.findOne({
-          where: { userId: review.userId },
+          where: { userId: review.userId + 1},
           raw: true,
         })
         userPromises.push(user)
       })
       let userArray = await Promise.all(userPromises)
-      console.log('user array test', userArray)
       allProps.users = userArray
       let numReviews = await Review.count({
         where: { propertyId: id },
       })
-      allProps.totalReviews = numReviews
+      allProps.reviewCount = numReviews
       return allProps
   } catch(e) {
     console.log('DB ERROR', e)
@@ -117,5 +116,5 @@ let top6 = async (id) => {
 }
 
 module.exports = {
-  top6,
+  reviews50,
 }

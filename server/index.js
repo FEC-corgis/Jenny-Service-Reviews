@@ -10,7 +10,7 @@ app.use(express.urlencoded({extended: true}))
 app.get('/propId/:id', async (req, res) => {
   const id = req.params.id
       try {
-        let data = await db.top6(id)
+        let data = await db.reviews50(id)
         res.send(data)
       } catch(e) {
         console.log(e)

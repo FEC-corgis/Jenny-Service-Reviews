@@ -14,6 +14,7 @@ class Modal extends React.Component {
     this.props.toggleModal()
   }
   render() {
+   console.log('reviews test', this.props)
     if (!this.props.visible) {
       return null
     } else {
@@ -24,7 +25,10 @@ class Modal extends React.Component {
           <div className="modal-X" onClick={this.onClose}>X</div>
 
               <div className="modal-avgs">
-              <Averages averages={this.props.averages} totalReviews={this.props.totalReviews} visible={this.props.visible}/>
+              <Averages
+              averages={this.props.averages}
+              totalReviews={this.props.totalReviews}
+              visible={this.props.visible}/>
               </div>
 
               <div className="modal-search">
@@ -36,7 +40,9 @@ class Modal extends React.Component {
               </div>
 
               <div className="modal-reviews">
-              {this.props.reviews6.map(review => <ReviewBlurb review={review} users={this.props.users} /> )}
+              {this.props.visible ?
+              this.props.reviewsAll.map(review => <ReviewBlurb review={review} users={this.props.users} />) :
+              this.props.reviews6.map(review => <ReviewBlurb review={review} users={this.props.users} />)}
               </div>
 
             </div>
