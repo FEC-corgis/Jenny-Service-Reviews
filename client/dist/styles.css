@@ -1,0 +1,11 @@
+.container {
+  display: grid;
+}
+.container-avgs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.container-reviews {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
