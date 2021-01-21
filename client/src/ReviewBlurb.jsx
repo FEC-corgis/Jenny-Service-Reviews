@@ -1,47 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-class ReviewBlurb extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      months: {
-        1: 'January',
-        2: 'February',
-        3: 'March',
-        4: 'April',
-        5: 'May',
-        6: 'June',
-        7: 'July',
-        8: 'August',
-        9: 'September',
-        10: 'October',
-        11: 'November',
-        12: 'December',
-      }
-    }
-  }
-  render() {
+const ReviewBlurb = (props) => {
+  const [months, setMonths] = useState({
+    1: 'January',
+    2: 'February',
+    3: 'March',
+    4: 'April',
+    5: 'May',
+    6: 'June',
+    7: 'July',
+    8: 'August',
+    9: 'September',
+    10: 'October',
+    11: 'November',
+    12: 'December',
+  })
     // console.log('users test', this.props)
     return (
       <div class="container-userReview">
         <p></p>
 
         <div class="pic">
-        <p></p>{<img src={`https://fecuserphotos.s3.us-east-2.amazonaws.com/${this.props.review.userId}.jpg`}/>}
+        <p></p>{<img src={`https://fecuserphotos.s3.us-east-2.amazonaws.com/${props.review.userId}.jpg`}/>}
         </div>
 
         <div class="name">
-        <br/>{this.props.users[this.props.review.userId + 1]}
-        <br/> {this.state.months[this.props.review.month]} {this.props.review.year}
+        <br/>{props.users[props.review.userId + 1]}
+        <br/> {months[props.review.month]} {props.review.year}
         </div>
 
         <div class="desc">
-        <br/>{this.props.review.description}
+        <br/>{props.review.description}
         </div>
 
       </div>
     )
-  }
 }
 
 export default ReviewBlurb;
