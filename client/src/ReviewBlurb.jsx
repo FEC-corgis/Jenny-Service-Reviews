@@ -27,8 +27,7 @@ class ReviewBlurb extends React.Component {
         <p></p>
 
         <div class="pic">
-        <br/>{this.props.review.userId < 50 ? <img src={`https://randomuser.me/api/portraits/women/${this.props.review.userId}.jpg`}/> : <img src={`https://randomuser.me/api/portraits/men/${this.props.review.userId}.jpg`}/>}
-        {/* <br/>{this.props.review.userId < 50 ? `https://randomuser.me/api/portraits/women/${this.props.review.userId}.jpg` : `https://randomuser.me/api/portraits/men/${this.props.review.userId}.jpg`} */}
+        <p></p>{<img src={`https://fecuserphotos.s3.us-east-2.amazonaws.com/${this.props.review.userId}.jpg`}/>}
         </div>
 
         <div class="name">

@@ -63,7 +63,7 @@ img {
 }
 .modalBody {
   background-color: white;
-  border-radius: 5%;
+  border-radius: 12px;
   width:80%;
   height: 80%;
   margin: 40px auto;
@@ -81,6 +81,7 @@ img {
   top: 20px;
   margin: 20px;
   grid-area: modal-X;
+  cursor: pointer;
 }
 .modal-avgs {
   grid-area: modal-avgs;
