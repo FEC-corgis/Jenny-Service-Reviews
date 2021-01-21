@@ -19,7 +19,7 @@ const Modal = (props) => {
               <div className="modal-avgs">
               <Averages
               averages={props.averages}
-              totalReviews={props.totalReviews}
+              reviewCount={props.reviewCount}
               visible={props.visible}/>
               </div>
 

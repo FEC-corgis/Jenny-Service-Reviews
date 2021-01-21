@@ -15,7 +15,7 @@ class Averages extends React.Component {
         <div>
 
           <div class="overall">
-          {this.props.averages.avgOverall} ({this.props.totalReviews} reviews)
+          {this.props.averages.avgOverall} ({this.props.reviewCount} reviews)
           </div>
 
           <div class="container-avgs">
@@ -47,7 +47,7 @@ class Averages extends React.Component {
         <div>
 
           <div class="overall">
-          {this.props.averages.avgOverall} ({this.props.totalReviews} reviews)
+          {this.props.averages.avgOverall} ({this.props.reviewCount} reviews)
           </div>
 
           <div class="modal-container-avgs">
