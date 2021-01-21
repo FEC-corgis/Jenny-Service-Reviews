@@ -1,4 +1,5 @@
 import React from 'react';
+import Ratings from './Ratings.jsx'
 
 const Averages = (props) => {
     // console.log('avgs props test', this.props)
@@ -10,27 +11,9 @@ const Averages = (props) => {
           {props.averages.avgOverall} ({props.reviewCount} reviews)
           </div>
 
-          <div class="container-avgs">
-
-          <div>Cleanliness</div>
-            <div className="rating">{props.averages.avgCleanliness}</div>
-
-          <div>Accuracy</div>
-          <div className="rating">{props.averages.avgAccuracy}</div>
-
-          <div >Communication</div>
-          <div className="rating">{props.averages.avgCommunication}</div>
-
-          <div>Location</div>
-          <div className="rating">{props.averages.avgLocation}</div>
-
-          <div>Check-in</div>
-          <div className="rating">{props.averages.avgCheckIn}</div>
-
-          <div>Value</div>
-          <div className="rating">{props.averages.avgValue}</div>
-
-          </div>
+          <Ratings
+          averages={props.averages}
+          className="container-avgs"/>
 
         </div>
       )
@@ -42,27 +25,9 @@ const Averages = (props) => {
           {props.averages.avgOverall} ({props.reviewCount} reviews)
           </div>
 
-          <div class="modal-container-avgs">
-
-          <div>Cleanliness</div>
-            <div className="rating">{props.averages.avgCleanliness}</div>
-
-          <div>Accuracy</div>
-          <div className="rating">{props.averages.avgAccuracy}</div>
-
-          <div >Communication</div>
-          <div className="rating">{props.averages.avgCommunication}</div>
-
-          <div>Location</div>
-          <div className="rating">{props.averages.avgLocation}</div>
-
-          <div>Check-in</div>
-          <div className="rating">{props.averages.avgCheckIn}</div>
-
-          <div>Value</div>
-          <div className="rating">{props.averages.avgValue}</div>
-
-          </div>
+          <Ratings
+          averages={props.averages}
+          className="modal-container-avgs"/>
 
         </div>
       )
