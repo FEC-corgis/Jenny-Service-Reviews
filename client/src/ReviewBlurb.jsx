@@ -24,9 +24,15 @@ const ReviewBlurb = (props) => {
         <p></p>{<img src={`https://fecuserphotos.s3.us-east-2.amazonaws.com/${props.review.userId}.jpg`}/>}
         </div>
 
-        <div class="name">
-        <br/>{props.users[props.review.userId + 1]}
-        <br/> {months[props.review.month]} {props.review.year}
+        <div className="name">
+
+          <div className="firstname">
+          {props.users[props.review.userId + 1]}
+          </div>
+        <div className="date">
+        {months[props.review.month]} {props.review.year}
+        </div>
+
         </div>
 
         <div class="desc">

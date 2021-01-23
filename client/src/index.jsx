@@ -17,11 +17,12 @@ const App = () => {
     setModal(!modal)
   }
   useEffect(() => { // is useEffect equiv to componentDidMount?
-    axios('/propId/7')
+    axios('/propId/5')
     .then(res =>{
       console.log(res.data)
       let usersObj = {}
       res.data.users.forEach(user => {
+        console.log('testing')
           usersObj[user.userId] = user.name
       })
       let top6 = []

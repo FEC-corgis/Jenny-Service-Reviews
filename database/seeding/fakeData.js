@@ -24,9 +24,11 @@ let date = function() {
 
 let description = function() {
   // string of 2 sentences
-  return [1,2].map(sentence => {
-    return lorem.blurb.split('. ')[Math.floor(Math.random() * 115)] + '. '
-  }).join('')
+  // return [1,2].map(sentence => {
+  //   return lorem.blurb.split('. ')[Math.floor(Math.random() * 115)] + '. '
+  // }).join('')
+  // string of 1 sentence
+  return lorem.blurb.split('. ')[Math.floor(Math.random() * 115)] + '. '
 }
 
 let fullReview = function() {

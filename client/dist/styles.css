@@ -6,17 +6,20 @@
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 /* AVERAGES */
 
 .overall {
   font-size: 20px;
+  font-weight: 700;
 }
 .container-avgs {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 20px;
+  line-height: 35px;
 }
 .rating {
   text-align: right;
@@ -28,6 +31,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  grid-column-gap: 10%;
 }
 .container-userReview {
   display: grid;
@@ -42,6 +46,13 @@
 .name {
   grid-area: name;
   text-align: left;
+}
+.firstname {
+  font-weight: 700;
+}
+.date {
+  color: gray;
+  font-size: 13px;
 }
 .desc {
   grid-area: desc;

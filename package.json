@@ -9,7 +9,8 @@
   "scripts": {
     "start": "nodemon ./server/index.js",
     "react-dev": "webpack --watch",
-    "seed": "node database/seeding/seed.js"
+    "seed": "node database/seeding/seed.js",
+    "test": "jest --watchAll"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -24,8 +25,10 @@
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
+    "@testing-library/react": "^11.2.3",
     "babel-loader": "^8.2.2",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git",
+    "jest": "^26.6.3",
     "webpack": "^5.13.0",
     "webpack-cli": "^4.3.1"
   },

@@ -9,6 +9,7 @@ const Averages = (props) => {
 
           <div class="overall">
           {props.averages.avgOverall} ({props.reviewCount} reviews)
+          <p></p>
           </div>
 
           <Ratings
