@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
 const Ratings = (props) => {
   return (
-    <div className={props.className}>
+    <div className={props.className} data-testid="ratingsTest">
 
           <div>Cleanliness</div>
           <div className="rating">{props.averages.avgCleanliness}</div>

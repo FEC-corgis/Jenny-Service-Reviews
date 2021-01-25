@@ -12,7 +12,7 @@ const Modal = (props) => {
     } else {
       return (
         <div className="modalBackground">
-          <div className="modalBody">
+          <div className="modalBody" >
 
           <div className="modal-X" onClick={onClose}>X</div>
 
@@ -31,10 +31,18 @@ const Modal = (props) => {
 
               </div>
 
-              <div className="modal-reviews">
+              <div className="modal-reviews" data-testid="modalReviewsTest">
               {props.visible ?
-              props.reviewsAll.map(review => <ReviewBlurb review={review} users={props.users} />) :
-              props.reviews6.map(review => <ReviewBlurb review={review} users={props.users} />)}
+              props.reviewsAll.map((review, index) => <ReviewBlurb
+              review={review}
+              users={props.users}
+              key={index}
+              data-testid="reviewBlurbTest"/>) :
+              props.reviews6.map((review, index) => <ReviewBlurb
+              review={review}
+              users={props.users}
+              key={index}
+              data-testid="reviewBlurbTest"/>)}
               </div>
 
             </div>

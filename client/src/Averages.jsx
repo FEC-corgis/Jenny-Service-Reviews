@@ -7,14 +7,16 @@ const Averages = (props) => {
       return (
         <div>
 
-          <div class="overall">
+          <div className="overall" data-testid="overallTest">
           {props.averages.avgOverall} ({props.reviewCount} reviews)
           <p></p>
           </div>
 
           <Ratings
           averages={props.averages}
-          className="container-avgs"/>
+          className="container-avgs"
+          data-testid="ratingsTest"
+          />
 
         </div>
       )
@@ -22,13 +24,15 @@ const Averages = (props) => {
       return (
         <div>
 
-          <div class="overall">
+          <div className="overall" data-testid="overallTest">
           {props.averages.avgOverall} ({props.reviewCount} reviews)
           </div>
 
           <Ratings
           averages={props.averages}
-          className="modal-container-avgs"/>
+          className="modal-container-avgs"
+          data-testid="ratingsModalTest"
+          />
 
         </div>
       )

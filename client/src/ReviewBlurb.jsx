@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 
 const ReviewBlurb = (props) => {
@@ -17,16 +18,16 @@ const ReviewBlurb = (props) => {
   })
     // console.log('users test', this.props)
     return (
-      <div class="container-userReview">
+      <div className="container-userReview" data-testid="reviewBlurbTest">
         <p></p>
 
-        <div class="pic">
+        <div className="pic">
         <p></p>{<img src={`https://fecuserphotos.s3.us-east-2.amazonaws.com/${props.review.userId}.jpg`}/>}
         </div>
 
         <div className="name">
 
-          <div className="firstname">
+          <div className="firstname" >
           {props.users[props.review.userId + 1]}
           </div>
         <div className="date">
@@ -35,7 +36,7 @@ const ReviewBlurb = (props) => {
 
         </div>
 
-        <div class="desc">
+        <div className="desc">
         <br/>{props.review.description}
         </div>
 
