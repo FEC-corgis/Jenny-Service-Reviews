@@ -1,3 +1,7 @@
 module.exports = {
-  "presets": ["@babel/preset-env", "@babel/preset-react"]
+  "presets": ["@babel/preset-env", "@babel/preset-react"],
+  "plugins": [
+    "@babel/plugin-proposal-async-generator-functions",
+    ["@babel/plugin-transform-runtime",{ regenerator: true }]
+  ]
 }

@@ -70,7 +70,7 @@ const ReviewAvg = sequelize.define('ReviewAvg', {
 
 let execSync = async () => {
   try {
-    await sequelize.sync() // need to sync each time if not seeding?
+    await sequelize.sync()
     console.log('Tables synced.')
   } catch(e) {
     console.log(e)
@@ -92,7 +92,6 @@ let reviews50 = async (id) => {
           ['year', 'DESC'],
           ['month', 'DESC'],
         ],
-        // limit: 6,
       })
       allProps.reviews = propReviews
       let userPromises = []

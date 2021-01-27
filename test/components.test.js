@@ -68,17 +68,3 @@ describe('REVIEWBLURB component', () => {
     }, 1000);
   });
 })
-
-describe('SERVER SIDE', () => {
-  test('should return a 200', () => {
-    request(App).get('/propId/5').then((res)=> {
-      expect(res.statusCode).toBe(200);
-    })
-  })
-  test('should return a 404', () => {
-    request(App).get('/propId/101').then((res)=> {
-      console.log('STATUS CHECK', res.statusCode)
-      expect(res.statusCode).toBe(404);
-    })
-  })
-})
