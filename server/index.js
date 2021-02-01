@@ -7,7 +7,7 @@ app.use(express.static('./client/dist'))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
-app.get('/propId/:id', async (req, res) => {
+app.get('/reviews/propId/:id', async (req, res) => {
   const id = req.params.id
       try {
         let data = await db.reviews50(id)

@@ -16,7 +16,7 @@ const App = () => {
     setModal(!modal)
   }
   useEffect(() => {
-    axios('/propId/73')
+    axios('/reviews/propId/73')
     .then(res =>{
       console.log(res.data)
       let usersObj = {}
