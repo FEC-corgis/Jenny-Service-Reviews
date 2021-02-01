@@ -9,47 +9,47 @@
 `,ze=Re.div`
   font-size: 20px;
   font-weight: 700;
-`,Ie=(Re.div`
+`,Ie=Re.div`
 display: grid;
 grid-template-columns: repeat(4, 1fr);
 column-gap: 20px;
 line-height: 35px;
-`,Re.div`
+`,Me=Re.div`
   text-align: right;
-`),Me=Re.div`
+`,De=Re.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-column-gap: 10%;
-`,De=Re.div`
+`,je=Re.div`
   display: grid;
   grid-template-columns: 70px 1fr;
   grid-template-areas:
   "pic name"
   "desc desc";
-`,je=Re.div`
-  grid-area: pic;
 `,Fe=Re.div`
+  grid-area: pic;
+`,Ue=Re.div`
   grid-area: name;
   text-align: left;
-`,Ue=Re.div`
-  font-weight: 700;
 `,$e=Re.div`
+  font-weight: 700;
+`,Be=Re.div`
   color: gray;
   font-size: 13px;
-`,Be=Re.div`
+`,Ve=Re.div`
   grid-area: desc;
-`,Ve=Re.img`
+`,He=Re.img`
   border-radius: 50%;
   height: 60px;
-`,He=Re.div`
+`,We=Re.div`
   position: fixed;
   top: 0;
   left: 0;
   width:100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
-`,We=Re.div`
+`,qe=Re.div`
   background-color: white;
   border-radius: 12px;
   width:80%;
@@ -63,22 +63,22 @@ line-height: 35px;
   "modal-X modal-X"
   "modal-avgs modal-search"
   "modal-avgs modal-reviews";
-`,qe=Re.div`
+`,Qe=Re.div`
   text-align: left;
   top: 20px;
   margin: 20px;
   grid-area: modal-X;
   cursor: pointer;
-`,Qe=Re.div`
-  grid-area: modal-avgs;
 `,Ye=Re.div`
-  grid-area: modal-search;
+  grid-area: modal-avgs;
 `,Xe=Re.div`
+  grid-area: modal-search;
+`,Ke=Re.div`
   grid-area: modal-reviews;
   overflow: scroll;
-`,Ke=Re.div`
+`,Ge=Re.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   text-align: left;
   margin: 20px;
-`,Ge=function(t){return e.createElement("div",{className:t.className,"data-testid":"ratingsTest"},e.createElement("div",null,"Cleanliness"),e.createElement(Ie,null,t.averages.avgCleanliness),e.createElement("div",null,"Accuracy"),e.createElement(Ie,null,t.averages.avgAccuracy),e.createElement("div",null,"Communication"),e.createElement(Ie,null,t.averages.avgCommunication),e.createElement("div",null,"Location"),e.createElement(Ie,null,t.averages.avgLocation),e.createElement("div",null,"Check-in"),e.createElement(Ie,null,t.averages.avgCheckIn),e.createElement("div",null,"Value"),e.createElement(Ie,null,t.averages.avgValue))},Je=function(t){return t.visible?e.createElement("div",null,e.createElement(ze,{"data-testid":"overallTest"},t.averages.avgOverall," (",t.reviewCount," reviews)"),e.createElement(Ke,null,e.createElement(Ge,{averages:t.averages,className:"modal-container-avgs","data-testid":"ratingsModalTest"}))):e.createElement("div",null,e.createElement(ze,{"data-testid":"overallTest"},t.averages.avgOverall," (",t.reviewCount," reviews)",e.createElement("p",null)),e.createElement(Ge,{averages:t.averages,className:"container-avgs","data-testid":"ratingsTest"}))},Ze=function(t){var n=(0,e.useState)({1:"January",2:"February",3:"March",4:"April",5:"May",6:"June",7:"July",8:"August",9:"September",10:"October",11:"November",12:"December"}),r=a()(n,2),o=r[0];return r[1],e.createElement(De,{"data-testid":"reviewBlurbTest"},e.createElement("p",null),e.createElement(je,null,e.createElement("p",null),e.createElement(Ve,{src:"https://fecuserphotos.s3.us-east-2.amazonaws.com/".concat(t.review.userId,".jpg")})),e.createElement(Fe,null,e.createElement(Ue,null,t.users[t.review.userId+1]),e.createElement($e,null,o[t.review.month]," ",t.review.year)),e.createElement(Be,null,e.createElement("br",null),t.review.description))},et=function(t){return t.visible?e.createElement(He,null,e.createElement(We,null,e.createElement(qe,{onClick:function(){t.toggleModal()}},"X"),e.createElement(Qe,null,e.createElement(Je,{averages:t.averages,reviewCount:t.reviewCount,visible:t.visible})),e.createElement(Ye,null,e.createElement("form",null,e.createElement("input",{type:"text",name:"search",placeholder:"Search reviews"}))),e.createElement(Xe,{"data-testid":"modalReviewsTest"},t.visible?t.reviewsAll.map((function(n,r){return e.createElement(Ze,{review:n,users:t.users,key:r,"data-testid":"reviewBlurbTest"})})):t.reviews6.map((function(n,r){return e.createElement(Ze,{review:n,users:t.users,key:r,"data-testid":"reviewBlurbTest"})}))))):null},tt=function(){var t=(0,e.useState)(""),n=a()(t,2),r=n[0],o=n[1],i=(0,e.useState)([]),u=a()(i,2),s=u[0],c=u[1],f=(0,e.useState)([]),d=a()(f,2),p=d[0],h=d[1],m=(0,e.useState)({}),g=a()(m,2),v=g[0],y=g[1],b=(0,e.useState)(""),w=a()(b,2),k=w[0],S=w[1],E=(0,e.useState)(!1),x=a()(E,2),C=x[0],_=x[1],P=function(){_(!C)};return(0,e.useEffect)((function(){l()("/reviews/propId/66").then((function(e){console.log(e.data);var t={};e.data.users.forEach((function(e){console.log("testing"),t[e.userId]=e.name}));for(var n=[],r=0;r<6;r++)n.push(e.data.reviews[r]);o(e.data.averages),c(n),h(e.data.reviews),y(t),S(e.data.reviewCount)}))}),[]),e.createElement(Le,null,e.createElement("div",null,e.createElement("p",null),e.createElement("button",{"data-testid":"modalButtonTest",onClick:P},"Show all ",k," reviews"),e.createElement(et,{visible:C,toggleModal:P,averages:r,reviewCount:k,reviewsAll:p,users:v,"data-testid":"modalTest"})),e.createElement("p",null),e.createElement("div",null,e.createElement(Je,{averages:r,reviewCount:k})),e.createElement(Me,null,s.map((function(t,n){return e.createElement(Ze,{review:t,users:v,key:n})}))))};t.render(e.createElement(tt,null),document.getElementById("Reviews"))})()})();
+`,Je=function(t){return e.createElement("div",{className:t.className,"data-testid":"ratingsTest"},e.createElement(Ie,null,e.createElement("div",null,"Cleanliness"),e.createElement(Me,null,t.averages.avgCleanliness),e.createElement("div",null,"Accuracy"),e.createElement(Me,null,t.averages.avgAccuracy),e.createElement("div",null,"Communication"),e.createElement(Me,null,t.averages.avgCommunication),e.createElement("div",null,"Location"),e.createElement(Me,null,t.averages.avgLocation),e.createElement("div",null,"Check-in"),e.createElement(Me,null,t.averages.avgCheckIn),e.createElement("div",null,"Value"),e.createElement(Me,null,t.averages.avgValue)))},Ze=function(t){return t.visible?e.createElement("div",null,e.createElement(ze,{"data-testid":"overallTest"},t.averages.avgOverall," (",t.reviewCount," reviews)"),e.createElement(Ge,null,e.createElement(Je,{averages:t.averages,className:"modal-container-avgs","data-testid":"ratingsModalTest"}))):e.createElement("div",null,e.createElement(ze,{"data-testid":"overallTest"},t.averages.avgOverall," (",t.reviewCount," reviews)",e.createElement("p",null)),e.createElement(Je,{averages:t.averages,className:"container-avgs","data-testid":"ratingsTest"}))},et=function(t){var n=(0,e.useState)({1:"January",2:"February",3:"March",4:"April",5:"May",6:"June",7:"July",8:"August",9:"September",10:"October",11:"November",12:"December"}),r=a()(n,2),o=r[0];return r[1],e.createElement(je,{"data-testid":"reviewBlurbTest"},e.createElement("p",null),e.createElement(Fe,null,e.createElement("p",null),e.createElement(He,{src:"https://fecuserphotos.s3.us-east-2.amazonaws.com/".concat(t.review.userId,".jpg")})),e.createElement(Ue,null,e.createElement($e,null,t.users[t.review.userId+1]),e.createElement(Be,null,o[t.review.month]," ",t.review.year)),e.createElement(Ve,null,e.createElement("br",null),t.review.description))},tt=function(t){return t.visible?e.createElement(We,null,e.createElement(qe,null,e.createElement(Qe,{onClick:function(){t.toggleModal()}},"X"),e.createElement(Ye,null,e.createElement(Ze,{averages:t.averages,reviewCount:t.reviewCount,visible:t.visible})),e.createElement(Xe,null,e.createElement("form",null,e.createElement("input",{type:"text",name:"search",placeholder:"Search reviews"}))),e.createElement(Ke,{"data-testid":"modalReviewsTest"},t.visible?t.reviewsAll.map((function(n,r){return e.createElement(et,{review:n,users:t.users,key:r,"data-testid":"reviewBlurbTest"})})):t.reviews6.map((function(n,r){return e.createElement(et,{review:n,users:t.users,key:r,"data-testid":"reviewBlurbTest"})}))))):null},nt=function(){var t=(0,e.useState)(""),n=a()(t,2),r=n[0],o=n[1],i=(0,e.useState)([]),u=a()(i,2),s=u[0],c=u[1],f=(0,e.useState)([]),d=a()(f,2),p=d[0],h=d[1],m=(0,e.useState)({}),g=a()(m,2),v=g[0],y=g[1],b=(0,e.useState)(""),w=a()(b,2),k=w[0],S=w[1],E=(0,e.useState)(!1),x=a()(E,2),C=x[0],_=x[1],P=function(){_(!C)};return(0,e.useEffect)((function(){l()("/reviews/propId/66").then((function(e){console.log(e.data);var t={};e.data.users.forEach((function(e){console.log("testing"),t[e.userId]=e.name}));for(var n=[],r=0;r<6;r++)n.push(e.data.reviews[r]);o(e.data.averages),c(n),h(e.data.reviews),y(t),S(e.data.reviewCount)}))}),[]),e.createElement(Le,null,e.createElement("div",null,e.createElement("p",null),e.createElement("button",{"data-testid":"modalButtonTest",onClick:P},"Show all ",k," reviews"),e.createElement(tt,{visible:C,toggleModal:P,averages:r,reviewCount:k,reviewsAll:p,users:v,"data-testid":"modalTest"})),e.createElement("p",null),e.createElement("div",null,e.createElement(Ze,{averages:r,reviewCount:k})),e.createElement(De,null,s.map((function(t,n){return e.createElement(et,{review:t,users:v,key:n})}))))};t.render(e.createElement(nt,null),document.getElementById("Reviews"))})()})();
