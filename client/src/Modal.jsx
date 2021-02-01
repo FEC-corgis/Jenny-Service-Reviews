@@ -1,6 +1,8 @@
 import React from 'react';
 import Averages from './Averages.jsx';
 import ReviewBlurb from './ReviewBlurb.jsx';
+import styled from 'styled-components';
+import Styles, { ModalBackground, ModalBody, ModalX, ModalAvgs, ModalSearch, ModalReviews } from './Styles.js';
 
 const Modal = (props) => {
   const onClose = () => {
@@ -11,27 +13,25 @@ const Modal = (props) => {
       return null
     } else {
       return (
-        <div className="modalBackground">
-          <div className="modalBody" >
+        <ModalBackground>
+          <ModalBody>
 
-          <div className="modal-X" onClick={onClose}>X</div>
+          <ModalX onClick={onClose}>X</ModalX>
 
-              <div className="modal-avgs">
+              <ModalAvgs>
               <Averages
               averages={props.averages}
               reviewCount={props.reviewCount}
               visible={props.visible}/>
-              </div>
+              </ModalAvgs>
 
-              <div className="modal-search">
-
+              <ModalSearch>
                 <form>
                   <input type="text" name="search" placeholder="Search reviews"/>
                 </form>
+              </ModalSearch>
 
-              </div>
-
-              <div className="modal-reviews" data-testid="modalReviewsTest">
+              <ModalReviews data-testid="modalReviewsTest">
               {props.visible ?
               props.reviewsAll.map((review, index) => <ReviewBlurb
               review={review}
@@ -43,10 +43,10 @@ const Modal = (props) => {
               users={props.users}
               key={index}
               data-testid="reviewBlurbTest"/>)}
-              </div>
+              </ModalReviews>
 
-            </div>
-        </div>
+            </ModalBody>
+        </ModalBackground>
       )
     }
 }

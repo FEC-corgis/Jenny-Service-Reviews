@@ -3,6 +3,8 @@ import axios from 'axios';
 import Averages from './Averages.jsx'
 import ReviewBlurb from './ReviewBlurb.jsx'
 import Modal from './Modal.jsx'
+import styled from 'styled-components'
+import Styles, { Container, ContainerReviews } from './Styles.js'
 
 const App = () => {
   const [averages, setAverages] = useState('')
@@ -16,7 +18,7 @@ const App = () => {
     setModal(!modal)
   }
   useEffect(() => {
-    axios('/reviews/propId/73')
+    axios('/reviews/propId/66')
     .then(res =>{
       console.log(res.data)
       let usersObj = {}
@@ -36,7 +38,7 @@ const App = () => {
     })
   }, [])
     return (
-      <div className="container">
+      <Container>
 
         <div>
         <p></p>
@@ -59,16 +61,16 @@ const App = () => {
         reviewCount={reviewCount} />
         </div>
 
-        <div className="container-reviews">
+        <ContainerReviews>
         {reviews6.map((review, index) =>
         <ReviewBlurb
         review={review}
         users={users}
         key={index}
         /> )}
-        </div>
+        </ContainerReviews>
 
-      </div>
+      </Container>
     )
 }
 

@@ -1,28 +1,31 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import styled from 'styled-components';
+import Styles, { Rating, ContainerAvgs } from './Styles.js';
 
 const Ratings = (props) => {
   return (
     <div className={props.className} data-testid="ratingsTest">
+      {/* <ContainerAvgs> */}
 
           <div>Cleanliness</div>
-          <div className="rating">{props.averages.avgCleanliness}</div>
+          <Rating>{props.averages.avgCleanliness}</Rating>
 
           <div>Accuracy</div>
-          <div className="rating">{props.averages.avgAccuracy}</div>
+          <Rating>{props.averages.avgAccuracy}</Rating>
 
           <div >Communication</div>
-          <div className="rating">{props.averages.avgCommunication}</div>
+          <Rating>{props.averages.avgCommunication}</Rating>
 
           <div>Location</div>
-          <div className="rating">{props.averages.avgLocation}</div>
+          <Rating>{props.averages.avgLocation}</Rating>
 
           <div>Check-in</div>
-          <div className="rating">{props.averages.avgCheckIn}</div>
+          <Rating>{props.averages.avgCheckIn}</Rating>
 
           <div>Value</div>
-          <div className="rating">{props.averages.avgValue}</div>
-
+          <Rating>{props.averages.avgValue}</Rating>
+          {/* </ContainerAvgs> */}
     </div>
   )
 }
