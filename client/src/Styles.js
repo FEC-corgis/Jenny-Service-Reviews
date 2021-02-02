@@ -1,4 +1,5 @@
 // import styled from 'styled-components';
+import { Star } from '@styled-icons/boxicons-solid/Star'
 
 // FRONT PAGE
 
@@ -126,4 +127,11 @@ export const ModalContainerAvgs = window.styled.div`
   grid-template-columns: 1fr 1fr;
   text-align: left;
   margin: 20px;
+`;
+
+// STAR
+
+export const PinkStar = styled(Star)`
+color: #FF385C;
+width: 20px;
 `;
