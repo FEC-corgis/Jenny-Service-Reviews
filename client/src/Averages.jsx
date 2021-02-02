@@ -1,6 +1,6 @@
 import React from 'react';
 import Ratings from './Ratings.jsx'
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import Styles, { Overall, ModalContainerAvgs } from './Styles.js';
 
 const Averages = (props) => {

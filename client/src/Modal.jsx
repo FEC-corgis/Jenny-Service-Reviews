@@ -1,7 +1,7 @@
 import React from 'react';
 import Averages from './Averages.jsx';
 import ReviewBlurb from './ReviewBlurb.jsx';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import Styles, { ModalBackground, ModalBody, ModalX, ModalAvgs, ModalSearch, ModalReviews } from './Styles.js';
 
 const Modal = (props) => {

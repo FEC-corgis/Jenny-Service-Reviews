@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+// import styled from 'styled-components';
 
 // FRONT PAGE
 
-export const Container = styled.div`
+export const Container = window.styled.div`
   display: grid;
   font-family: Arial, Helvetica, sans-serif;
   width: 80%;
@@ -13,32 +13,32 @@ export const Container = styled.div`
 
 // AVERAGES
 
-export const Overall = styled.div`
+export const Overall = window.styled.div`
   font-size: 20px;
   font-weight: 700;
 `;
 
-export const ContainerAvgs = styled.div`
+export const ContainerAvgs = window.styled.div`
 display: grid;
 grid-template-columns: repeat(4, 1fr);
 column-gap: 20px;
 line-height: 35px;
 `;
 
-export const Rating = styled.div`
+export const Rating = window.styled.div`
   text-align: right;
 `;
 
 // REVIEWS
 
-export const ContainerReviews = styled.div`
+export const ContainerReviews = window.styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-column-gap: 10%;
 `;
 
-export const ContainerUserReview = styled.div`
+export const ContainerUserReview = window.styled.div`
   display: grid;
   grid-template-columns: 70px 1fr;
   grid-template-areas:
@@ -46,36 +46,36 @@ export const ContainerUserReview = styled.div`
   "desc desc";
 `;
 
-export const Pic = styled.div`
+export const Pic = window.styled.div`
   grid-area: pic;
 `;
 
-export const Name = styled.div`
+export const Name = window.styled.div`
   grid-area: name;
   text-align: left;
 `;
 
-export const FirstName = styled.div`
+export const FirstName = window.styled.div`
   font-weight: 700;
 `;
 
-export const Date = styled.div`
+export const Date = window.styled.div`
   color: gray;
   font-size: 13px;
 `;
 
-export const Description = styled.div`
+export const Description = window.styled.div`
   grid-area: desc;
 `;
 
-export const Avatar = styled.img`
+export const Avatar = window.styled.img`
   border-radius: 50%;
   height: 60px;
 `;
 
 // MODAL
 
-export const ModalBackground = styled.div`
+export const ModalBackground = window.styled.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -84,7 +84,7 @@ export const ModalBackground = styled.div`
   background: rgba(0, 0, 0, 0.6);
 `;
 
-export const ModalBody = styled.div`
+export const ModalBody = window.styled.div`
   background-color: white;
   border-radius: 12px;
   width:80%;
@@ -100,7 +100,7 @@ export const ModalBody = styled.div`
   "modal-avgs modal-reviews";
 `;
 
-export const ModalX = styled.div`
+export const ModalX = window.styled.div`
   text-align: left;
   top: 20px;
   margin: 20px;
@@ -108,20 +108,20 @@ export const ModalX = styled.div`
   cursor: pointer;
 `;
 
-export const ModalAvgs = styled.div`
+export const ModalAvgs = window.styled.div`
   grid-area: modal-avgs;
 `;
 
-export const ModalSearch = styled.div`
+export const ModalSearch = window.styled.div`
   grid-area: modal-search;
 `;
 
-export const ModalReviews = styled.div`
+export const ModalReviews = window.styled.div`
   grid-area: modal-reviews;
   overflow: scroll;
 `;
 
-export const ModalContainerAvgs = styled.div`
+export const ModalContainerAvgs = window.styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   text-align: left;

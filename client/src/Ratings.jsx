@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import Styles, { Rating, ContainerAvgs } from './Styles.js';
 
 const Ratings = (props) => {

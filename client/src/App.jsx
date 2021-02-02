@@ -3,7 +3,7 @@ import axios from 'axios';
 import Averages from './Averages.jsx'
 import ReviewBlurb from './ReviewBlurb.jsx'
 import Modal from './Modal.jsx'
-import styled from 'styled-components'
+// import styled from 'styled-components'
 import Styles, { Container, ContainerReviews } from './Styles.js'
 
 const App = () => {
