@@ -38,7 +38,7 @@ let fullReview = function() {
   review.description = description()
   return review
 }
-console.log(fullReview())
+// console.log(fullReview())
 
 module.exports = {
   ratings,

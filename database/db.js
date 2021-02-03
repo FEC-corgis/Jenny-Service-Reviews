@@ -114,6 +114,26 @@ let reviews50 = async (id) => {
   }
 }
 
+let overall = async (id) => {
+  try {
+    let overallRating = await ReviewAvg.findOne({ where: { propertyId: id }})
+    return overallRating
+  } catch(e) {
+    console.log('DB ERROR', e)
+  }
+}
+
+let total = async (id) => {
+  try {
+    let totalReviews = await Review.count({ where: { propertyId: id }})
+    return totalReviews
+  } catch(e) {
+    console.log('DB ERROR', e)
+  }
+}
+
 module.exports = {
   reviews50,
+  overall,
+  total,
 }

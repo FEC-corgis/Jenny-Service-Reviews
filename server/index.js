@@ -21,6 +21,30 @@ app.get('/reviews/propId/:id', async (req, res) => {
       }
 })
 
+app.get('/reviews/overallRating/:id', async (req, res) => {
+  const id = req.params.id
+  try {
+    let data = await db.overall(id)
+    let overallObj = {}
+    overallObj.overallRating = Number(data.avgOverall)
+    res.send(overallObj)
+  } catch(e) {
+    console.log(e)
+  }
+})
+
+app.get('/reviews/totalReviews/:id', async (req, res) => {
+  const id = req.params.id
+  try {
+    let data = await db.total(id)
+    let totalObj = {}
+    totalObj.totalReviews = data
+    res.send(totalObj)
+  } catch(e) {
+    console.log(e)
+  }
+})
+
 app.listen(port, () => {
   console.log(`Listening at port ${port}.`)
 })
