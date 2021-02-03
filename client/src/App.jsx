@@ -57,11 +57,6 @@ const App = () => {
         <p></p>
         <div>
 
-          <div className="barContainer">
-          <div className="barGray"></div>
-          <div className="barBlack"></div>
-          </div>
-
         <Averages
         averages={averages}
         reviewCount={reviewCount} />
