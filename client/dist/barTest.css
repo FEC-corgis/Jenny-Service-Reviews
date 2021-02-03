@@ -1,0 +1,23 @@
+.barContainer {
+  display: flex;
+  width: 125px;
+}
+/* .barGray, .barBlack {
+  grid-column: 1;
+  grid-row: 1;
+} */
+.barGray {
+  background: lightgray;
+  width: 125px;
+  height: 4px;
+  border-radius: 20px;
+}
+.barBlack {
+  background: black;
+  width: 125px;
+  height: 4px;
+  border-radius: 20px;
+  margin-left: -100%;
+  width: 75%
+  /* position: relative; */
+}

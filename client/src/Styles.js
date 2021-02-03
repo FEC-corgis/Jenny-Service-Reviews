@@ -129,9 +129,31 @@ export const ModalContainerAvgs = window.styled.div`
   margin: 20px;
 `;
 
+// RATING BAR
+
+export const BarContainer = window.styled.div`
+display: flex;
+width: 125px;
+`;
+
+export const BarGray = window.styled.div`
+background: lightgray;
+width: 125px;
+height: 4px;
+border-radius: 20px;
+`;
+
+export const BarBlack = window.styled.div`
+background: black;
+width: 125px;
+height: 4px;
+border-radius: 20px;
+margin-left: -100%;
+`;
+
 // STAR
 
-export const PinkStar = styled(Star)`
+export const PinkStar = window.styled(Star)`
 color: #FF385C;
 width: 20px;
 `;
