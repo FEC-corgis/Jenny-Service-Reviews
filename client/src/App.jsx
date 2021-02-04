@@ -18,7 +18,7 @@ const App = () => {
     setModal(!modal)
   }
   useEffect(() => {
-    axios('http://localhost:3000/reviews/propId/66')
+    axios('/reviews/propId/66')
     .then(res =>{
       console.log('REVIEWS 50reviews test', res.data)
       let usersObj = {}
@@ -37,14 +37,14 @@ const App = () => {
     })
     // OVERALL RATING ENDPOINT
     .then(() => {
-      return axios('http://localhost:3000/reviews/overallRating/77')
+      return axios('/reviews/overallRating/77')
     })
     .then(res => {
       console.log('REVIEWS overallRating', res.data)
     })
     // TOTAL REVIEW COUNT ENDPOINT
     .then(() => {
-      return axios('http://localhost:3000/reviews/totalReviews/35')
+      return axios('/reviews/totalReviews/35')
     })
     .then(res => {
       console.log('REVIEWS totalReviews', res.data)
