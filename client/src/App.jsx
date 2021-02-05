@@ -6,7 +6,8 @@ import Modal from './Modal.jsx'
 // import styled from 'styled-components'
 import Styles, { Container, ContainerReviews } from './Styles.js'
 
-const App = () => {
+const App = (props) => {
+  console.log('PROPS TEST', props)
   const [averages, setAverages] = useState('')
   const [reviews6, setReviews6] = useState([])
   const [reviewsAll, setReviewsAll] = useState([])
@@ -17,8 +18,9 @@ const App = () => {
   const toggleModal = () => {
     setModal(!modal)
   }
+  let id = props.match.params.id
   useEffect(() => {
-    axios('/reviews/propId/66')
+    axios(`/reviews/propId/${id}`)
     .then(res =>{
       console.log('REVIEWS 50reviews test', res.data)
       let usersObj = {}
@@ -37,14 +39,14 @@ const App = () => {
     })
     // OVERALL RATING ENDPOINT
     .then(() => {
-      return axios('/reviews/overallRating/77')
+      return axios(`/reviews/overallRating/${id}`)
     })
     .then(res => {
       console.log('REVIEWS overallRating', res.data)
     })
     // TOTAL REVIEW COUNT ENDPOINT
     .then(() => {
-      return axios('/reviews/totalReviews/35')
+      return axios(`/reviews/totalReviews/${id}`)
     })
     .then(res => {
       console.log('REVIEWS totalReviews', res.data)
