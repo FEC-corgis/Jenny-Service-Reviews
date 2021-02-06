@@ -5,7 +5,7 @@ const db = require('../database/db.js')
 const cors = require('cors')
 const path = require('path')
 
-app.use('/rooms/:id', express.static('./client/dist'))
+app.use(express.static('./client/dist'))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(cors())

@@ -7,7 +7,6 @@ import Modal from './Modal.jsx'
 import Styles, { Container, ContainerReviews } from './Styles.js'
 
 const App = (props) => {
-  console.log('PROPS TEST', props)
   const [averages, setAverages] = useState('')
   const [reviews6, setReviews6] = useState([])
   const [reviewsAll, setReviewsAll] = useState([])
