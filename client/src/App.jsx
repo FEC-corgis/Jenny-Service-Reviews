@@ -36,20 +36,6 @@ const App = (props) => {
       setUsers(usersObj)
       setReviewCount(res.data.reviewCount)
     })
-    // OVERALL RATING ENDPOINT
-    .then(() => {
-      return axios(`/reviews/overallRating/${id}`)
-    })
-    .then(res => {
-      console.log('REVIEWS overallRating', res.data)
-    })
-    // TOTAL REVIEW COUNT ENDPOINT
-    .then(() => {
-      return axios(`/reviews/totalReviews/${id}`)
-    })
-    .then(res => {
-      console.log('REVIEWS totalReviews', res.data)
-    })
   }, [])
     return (
       <Container>
