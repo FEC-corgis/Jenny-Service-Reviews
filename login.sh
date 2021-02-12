@@ -1,0 +1,1 @@
+ssh -i "fec1.pem" ec2-user@ec2-3-15-172-241.us-east-2.compute.amazonaws.com
