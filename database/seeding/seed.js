@@ -1,11 +1,12 @@
 const { Sequelize, DataTypes } = require('sequelize');
 const fakeData = require('./fakeData.js')
 const names = require('./names.js')
+const dotenv = require('dotenv').config()
 
 const sequelize = new Sequelize({
   dialect: 'mysql',
-  username: 'root',
-  password: '',
+  username: process.env.DB_USER,
+  password: process.env.DB_PASS,
   database: 'fec_reviews',
 })
 

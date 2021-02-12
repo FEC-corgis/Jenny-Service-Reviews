@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { setState, useState, useEffect } from 'react';
 import axios from 'axios';
 import Averages from './Averages.jsx'
@@ -36,6 +37,7 @@ const App = (props) => {
       setUsers(usersObj)
       setReviewCount(res.data.reviewCount)
     })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
     return (
       <Container>
