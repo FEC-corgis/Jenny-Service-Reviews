@@ -3,28 +3,38 @@
 // ADD PEM TO ROOT, GITIGNORE & CHMOD IT
 chmod 400 [.pem file]
 
-// LOGIN USING PEM
-[ssh with pem login]
-
 // CREATE BASH SCRIPT LOGIN
-touch login.sh (with above cmd)
+vim login.sh (with ssh with pem login)
 
 // INSTALL NODE ON UBUNTU
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 . ~/.nvm/nvm.sh
 nvm install node
 
-// RUN TEST SERVER
+// RUN TEST SERVER IN NEW DIR
 npm init -y
 npm install express
 sudo vim server.js
+
+const express = require('express')
+const app = express()
+const port = 3000
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
+})
+
 node server.js
 
 // EDIT INSTANCE INBOUND RULES
 add "all traffic" "anywhere" & access from http ip:3000
 
 // INSTALL GIT
-sudo yum install git
+sudo apt-get install
 git --version
 
 // CLONE REPO
