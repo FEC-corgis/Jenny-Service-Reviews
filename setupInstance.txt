@@ -1,0 +1,50 @@
+// CREATE INSTANCE
+
+// ADD PEM TO ROOT, GITIGNORE & CHMOD IT
+chmod 400 [.pem file]
+
+// LOGIN USING PEM
+[ssh with pem login]
+
+// CREATE BASH SCRIPT LOGIN
+touch login.sh (with above cmd)
+
+// INSTALL NODE ON UBUNTU
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+. ~/.nvm/nvm.sh
+nvm install node
+
+// RUN TEST SERVER
+npm init -y
+npm install express
+sudo vim server.js
+node server.js
+
+// EDIT INSTANCE INBOUND RULES
+add "all traffic" "anywhere" & access from http ip:3000
+
+// INSTALL GIT
+sudo yum install git
+git --version
+
+// CLONE REPO
+git clone [repo url]
+
+// INSTALL DEPENDENCIES
+cd to project root & npm install
+
+// INSTALL MYSQL
+sudo apt update
+sudo apt-get install mysql-server -y
+sudo mysql
+create database [name]
+
+// FLUSH MYSQL PRIVILEGES
+sudo mysql -u root -p
+USE mysql;
+UPDATE user SET plugin='mysql_native_password' WHERE User='root';
+FLUSH PRIVILEGES;
+exit;
+
+// SEED DB
+
