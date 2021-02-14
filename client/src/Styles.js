@@ -74,6 +74,17 @@ export const Avatar = window.styled.img`
   height: 60px;
 `;
 
+export const PicName = window.styled.div`
+display: flex;
+align-items: center;
+gap: 20px;
+`;
+
+export const Blurb = window.styled.div`
+display: flex;
+flex-direction: column;
+`;
+
 // MODAL
 
 export const ModalBackground = window.styled.div`

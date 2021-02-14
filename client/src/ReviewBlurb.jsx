@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 // import styled from 'styled-components'
-import Styles, { ContainerUserReview, Pic, Name, FirstName, Date, Description, Avatar } from './Styles.js';
+import Styles, { ContainerUserReview, Pic, Name, FirstName, Date, Description, Avatar, PicName, Blurb } from './Styles.js';
 
 const ReviewBlurb = (props) => {
   const [months, setMonths] = useState({
@@ -23,22 +23,28 @@ const ReviewBlurb = (props) => {
       <ContainerUserReview data-testid="reviewBlurbTest">
         <p></p>
 
+        <Blurb>
+        <PicName>
+
         <Pic>
         <p></p>{<Avatar src={`https://fecuserphotos.s3.us-east-2.amazonaws.com/${props.review.userId}.jpg`}/>}
         </Pic>
 
         <Name>
-          <FirstName>
-          {props.users[props.review.userId + 1]}
-          </FirstName>
+        <FirstName>
+        {props.users[props.review.userId + 1]}
+        </FirstName>
         <Date>
         {months[props.review.month]} {props.review.year}
         </Date>
         </Name>
 
+        </PicName>
+
         <Description>
         <br/>{props.review.description}
         </Description>
+        </Blurb>
 
       </ContainerUserReview>
     )
