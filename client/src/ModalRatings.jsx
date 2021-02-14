@@ -1,56 +1,65 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 // import styled from 'styled-components';
-import Styles, { Rating, ContainerAvgs, RatingAvg } from './Styles.js';
+import Styles, { Rating, ModalContainerAvgs, ModalRating, ModalRatingAvg } from './Styles.js';
 import RatingBar from './RatingBar.jsx'
 
-const Ratings = (props) => {
+const ModalRatings = (props) => {
   return (
     <div className={props.className} data-testid="ratingsTest">
-      <ContainerAvgs>
-<div>
-          <Rating>
-          <div>Cleanliness</div>
-          <RatingAvg>
-            <RatingBar rating={props.averages.avgCleanliness}></RatingBar>
-            {props.averages.avgCleanliness}
-            </RatingAvg>
-            </Rating>
+      <ModalContainerAvgs>
 
-          <Rating>
+          <ModalRating>
+          <div>Cleanliness</div>
+            <ModalRatingAvg>
+            <RatingBar rating={props.averages.avgCleanliness}></RatingBar>
+              {props.averages.avgCleanliness}
+              </ModalRatingAvg>
+            </ModalRating>
+
+            <ModalRating>
           <div>Accuracy</div>
+          <ModalRatingAvg>
           <RatingBar rating={props.averages.avgAccuracy}></RatingBar>
             {props.averages.avgAccuracy}
-            </Rating>
+            </ModalRatingAvg>
+          </ModalRating>
 
-          <Rating>
+          <ModalRating>
           <div >Communication</div>
+          <ModalRatingAvg>
           <RatingBar rating={props.averages.avgCommunication}></RatingBar>
             {props.averages.avgCommunication}
-            </Rating>
-    </div>
-    <div>
-          <Rating>
+            </ModalRatingAvg>
+            </ModalRating>
+
+          <ModalRating>
           <div>Location</div>
+          <ModalRatingAvg>
           <RatingBar rating={props.averages.avgLocation}></RatingBar>
             {props.averages.avgLocation}
-            </Rating>
+            </ModalRatingAvg>
+            </ModalRating>
 
-          <Rating>
+          <ModalRating>
           <div>Check-in</div>
+          <ModalRatingAvg>
           <RatingBar rating={props.averages.avgCheckIn}></RatingBar>
             {props.averages.avgCheckIn}
-            </Rating>
+            </ModalRatingAvg>
+            </ModalRating>
 
-          <Rating>
+          <ModalRating>
           <div>Value</div>
+          <ModalRatingAvg>
           <RatingBar rating={props.averages.avgValue}></RatingBar>
             {props.averages.avgValue}
-            </Rating>
-    </div>
-          </ContainerAvgs>
+            </ModalRatingAvg>
+          </ModalRating>
+
+          </ModalContainerAvgs>
     </div>
   )
 }
 
-export default Ratings;
+export default ModalRatings;

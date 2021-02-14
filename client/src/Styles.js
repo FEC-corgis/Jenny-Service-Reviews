@@ -5,9 +5,10 @@ import { Star } from '@styled-icons/boxicons-solid/Star'
 
 export const Container = window.styled.div`
   display: grid;
+  justify-content: space-between;
   font-family: Arial, Helvetica, sans-serif;
   width: 80%;
-  margin-left: auto;
+  margin-left: 5%;
   margin-right: auto;
   font-family: 'Nunito Sans', sans-serif;
 `;
@@ -17,17 +18,27 @@ export const Container = window.styled.div`
 export const Overall = window.styled.div`
   font-size: 20px;
   font-weight: 700;
+  text-align: left;
 `;
 
 export const ContainerAvgs = window.styled.div`
-display: grid;
+display: flex;
+width: 90vw;
+// justify-content: space-between;
 grid-template-columns: repeat(4, 1fr);
 column-gap: 20px;
 line-height: 35px;
 `;
 
 export const Rating = window.styled.div`
-  text-align: right;
+  display: flex;
+  align-items: center;
+`;
+
+export const RatingAvg = window.styled.div`
+display: flex;
+align-items: center;
+
 `;
 
 // REVIEWS
@@ -36,12 +47,11 @@ export const ContainerReviews = window.styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-column-gap: 10%;
 `;
 
 export const ContainerUserReview = window.styled.div`
   display: grid;
-  grid-template-columns: 70px 1fr;
+  grid-template-columns: 0px 35vw;
   grid-template-areas:
   "pic name"
   "desc desc";
@@ -135,10 +145,21 @@ export const ModalReviews = window.styled.div`
 `;
 
 export const ModalContainerAvgs = window.styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   text-align: left;
   margin: 20px;
+`;
+
+export const ModalRating = window.styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const ModalRatingAvg = window.styled.div`
+display: flex;
+align-items: center;
 `;
 
 // RATING BAR
