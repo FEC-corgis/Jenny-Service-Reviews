@@ -83,6 +83,7 @@ flex-direction: column;
 `,lt=window.styled.div`
   grid-area: modal-reviews;
   overflow: scroll;
+  text-align: left;
 `,ut=window.styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;

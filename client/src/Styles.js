@@ -131,6 +131,7 @@ export const ModalSearch = window.styled.div`
 export const ModalReviews = window.styled.div`
   grid-area: modal-reviews;
   overflow: scroll;
+  text-align: left;
 `;
 
 export const ModalContainerAvgs = window.styled.div`
