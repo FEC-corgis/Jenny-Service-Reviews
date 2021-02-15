@@ -11,13 +11,14 @@ export const Container = window.styled.div`
   margin-left: 5%;
   margin-right: auto;
   font-family: 'Nunito Sans', sans-serif;
+  row-gap: 25px;
 `;
 
 // AVERAGES
 
 export const Overall = window.styled.div`
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
   text-align: left;
 `;
 
@@ -28,11 +29,14 @@ justify-content: left;
 grid-template-columns: repeat(4, 1fr);
 column-gap: 8vw;
 line-height: 35px;
+
 `;
 
 export const Rating = window.styled.div`
   display: flex;
   column-gap: 17vw;
+  font-size: 17px;
+  font-weight: 300;
 `;
 
 export const RatingAvg = window.styled.div`
@@ -41,6 +45,7 @@ align-items: center;
 column-gap: 10px;
 margin-left: auto;
 font-size: 12px;
+font-weight: 600;
 `;
 
 // REVIEWS
@@ -69,16 +74,18 @@ export const Name = window.styled.div`
 `;
 
 export const FirstName = window.styled.div`
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 17px;
 `;
 
 export const Date = window.styled.div`
   color: gray;
-  font-size: 13px;
+  font-size: 15px;
 `;
 
 export const Description = window.styled.div`
   grid-area: desc;
+  font-weight: 300;
 `;
 
 export const Avatar = window.styled.img`
@@ -100,12 +107,11 @@ flex-direction: column;
 // MODAL
 
 export const ModalButtonContainer = window.styled.div`
-height: 150px;
+height: 125px;
 `;
 
 export const ModalButton = window.styled.button`
   position: relative;
-  top: 20px;
   width: 200px;
   height: 50px;
   border-radius: 10px;
@@ -113,6 +119,7 @@ export const ModalButton = window.styled.button`
   background-color: white;
   font-family: 'Nunito Sans', sans-serif;
   font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
 `;
 
@@ -159,7 +166,7 @@ export const ModalOverall = window.styled.div`
   display: flex;
   column-gap: 8px;
   align-items: center;
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 700;
   text-align: left;
   margin: 20px;
@@ -206,6 +213,8 @@ export const ModalRating = window.styled.div`
   justify-content: space-between;
   line-height: 35px;
   column-gap: 5vw;
+  font-size: 15px;
+  font-weight: 300;
 `;
 
 export const ModalRatingAvg = window.styled.div`
@@ -213,6 +222,7 @@ display: flex;
 align-items: center;
 column-gap: 10px;
 font-size: 12px;
+font-weight: 600;
 `;
 
 // RATING BAR
