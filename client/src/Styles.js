@@ -133,6 +133,7 @@ export const ModalBackground = window.styled.div`
   width:100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
+  z-index: 100;
 `;
 
 export const ModalBody = window.styled.div`
@@ -150,6 +151,7 @@ export const ModalBody = window.styled.div`
   "modal-X modal-X"
   "modal-avgs modal-search"
   "modal-avgs modal-reviews";
+  z-index: 101;
 `;
 
 export const ModalX = window.styled.div`

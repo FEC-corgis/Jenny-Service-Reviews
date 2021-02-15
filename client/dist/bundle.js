@@ -89,6 +89,7 @@ height: 125px;
   width:100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
+  z-index: 100;
 `,it=window.styled.div`
   background-color: white;
   border-radius: 12px;
@@ -104,6 +105,7 @@ height: 125px;
   "modal-X modal-X"
   "modal-avgs modal-search"
   "modal-avgs modal-reviews";
+  z-index: 101;
 `,lt=window.styled.div`
   position: relative;
   text-align: left;
