@@ -26,19 +26,20 @@ display: flex;
 width: 90vw;
 justify-content: left;
 grid-template-columns: repeat(4, 1fr);
-column-gap: 5vw;
+column-gap: 8vw;
 line-height: 35px;
 `;
 
 export const Rating = window.styled.div`
   display: flex;
-  column-gap: 20vw;
+  column-gap: 16vw;
 `;
 
 export const RatingAvg = window.styled.div`
 display: flex;
 align-items: center;
 column-gap: 10px;
+margin-left: auto;
 `;
 
 // REVIEWS

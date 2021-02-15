@@ -16,15 +16,16 @@ display: flex;
 width: 90vw;
 justify-content: left;
 grid-template-columns: repeat(4, 1fr);
-column-gap: 5vw;
+column-gap: 8vw;
 line-height: 35px;
 `,We=window.styled.div`
   display: flex;
-  column-gap: 20vw;
+  column-gap: 16vw;
 `,qe=window.styled.div`
 display: flex;
 align-items: center;
 column-gap: 10px;
+margin-left: auto;
 `,Qe=window.styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
