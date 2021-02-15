@@ -99,6 +99,23 @@ flex-direction: column;
 
 // MODAL
 
+export const ModalButtonContainer = window.styled.div`
+height: 150px;
+`;
+
+export const ModalButton = window.styled.button`
+  position: relative;
+  top: 20px;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  border-width: 1px;
+  background-color: white;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+`;
+
 export const ModalBackground = window.styled.div`
   position: fixed;
   top: 0;

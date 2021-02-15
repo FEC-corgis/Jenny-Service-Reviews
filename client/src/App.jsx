@@ -5,7 +5,7 @@ import Averages from './Averages.jsx'
 import ReviewBlurb from './ReviewBlurb.jsx'
 import Modal from './Modal.jsx'
 // import styled from 'styled-components'
-import Styles, { Container, ContainerReviews } from './Styles.js'
+import Styles, { Container, ContainerReviews, ModalButton, ModalButtonContainer } from './Styles.js'
 
 const App = (props) => {
   const [averages, setAverages] = useState('')
@@ -42,20 +42,6 @@ const App = (props) => {
     return (
       <Container>
 
-        <div>
-        <p></p>
-        <button data-testid="modalButtonTest" onClick={toggleModal}>Show all {reviewCount} reviews</button>
-        <Modal
-        visible={modal}
-        toggleModal={toggleModal}
-        averages={averages}
-        reviewCount={reviewCount}
-        reviewsAll={reviewsAll}
-        users={users}
-        data-testid="modalTest"
-        />
-        </div>
-
         <p></p>
         <div>
 
@@ -72,6 +58,20 @@ const App = (props) => {
         key={index}
         /> )}
         </ContainerReviews>
+
+        <ModalButtonContainer>
+        <p></p>
+        <ModalButton data-testid="modalButtonTest" onClick={toggleModal}>Show all {reviewCount} reviews</ModalButton>
+        <Modal
+        visible={modal}
+        toggleModal={toggleModal}
+        averages={averages}
+        reviewCount={reviewCount}
+        reviewsAll={reviewsAll}
+        users={users}
+        data-testid="modalTest"
+        />
+        </ModalButtonContainer>
 
       </Container>
     )
