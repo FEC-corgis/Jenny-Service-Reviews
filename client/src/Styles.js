@@ -153,8 +153,9 @@ export const ModalBody = window.styled.div`
 `;
 
 export const ModalX = window.styled.div`
+  position: relative;
   text-align: left;
-  top: 20px;
+  left: 15px;
   margin: 20px;
   grid-area: modal-X;
   cursor: pointer;
@@ -172,7 +173,7 @@ export const ModalOverall = window.styled.div`
   font-size: 32px;
   font-weight: 700;
   text-align: left;
-  margin: 20px;
+  margin: 30px;
 `;
 
 export const ModalSearch = window.styled.form`
@@ -207,14 +208,14 @@ export const ModalContainerAvgs = window.styled.div`
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin: 20px;
+  margin: 30px;
 `;
 
 export const ModalRating = window.styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  line-height: 35px;
+  line-height: 30px;
   column-gap: 5vw;
   font-size: 15px;
   font-weight: 300;

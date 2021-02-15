@@ -42,9 +42,7 @@ const App = (props) => {
     return (
       <Container>
 
-        <p></p>
         <div>
-
         <Averages
         averages={averages}
         reviewCount={reviewCount} />
