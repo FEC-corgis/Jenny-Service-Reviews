@@ -111,11 +111,12 @@ export const ModalBody = window.styled.div`
   background-color: white;
   border-radius: 12px;
   width:80%;
-  height: 80%;
+  height: 85%;
   margin: 40px auto;
   text-align: center;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 2fr 3fr;
+  column-gap: 75px;
   grid-template-rows: 40px;
   grid-template-areas:
   "modal-X modal-X"
