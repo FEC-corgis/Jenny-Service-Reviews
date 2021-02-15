@@ -24,21 +24,21 @@ export const Overall = window.styled.div`
 export const ContainerAvgs = window.styled.div`
 display: flex;
 width: 90vw;
-// justify-content: space-between;
+justify-content: left;
 grid-template-columns: repeat(4, 1fr);
-column-gap: 20px;
+column-gap: 5vw;
 line-height: 35px;
 `;
 
 export const Rating = window.styled.div`
   display: flex;
-  align-items: center;
+  column-gap: 20vw;
 `;
 
 export const RatingAvg = window.styled.div`
 display: flex;
 align-items: center;
-
+column-gap: 10px;
 `;
 
 // REVIEWS
