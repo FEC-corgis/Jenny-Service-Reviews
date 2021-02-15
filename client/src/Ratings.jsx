@@ -12,40 +12,50 @@ const Ratings = (props) => {
           <Rating>
           <div>Cleanliness</div>
           <RatingAvg>
-            <RatingBar rating={props.averages.avgCleanliness}></RatingBar>
+            <RatingBar rating={props.averages.avgCleanliness}/>
             {props.averages.avgCleanliness}
             </RatingAvg>
             </Rating>
 
           <Rating>
           <div>Accuracy</div>
-          <RatingBar rating={props.averages.avgAccuracy}></RatingBar>
+          <RatingAvg>
+          <RatingBar rating={props.averages.avgAccuracy}/>
             {props.averages.avgAccuracy}
+          </RatingAvg>
             </Rating>
 
           <Rating>
           <div >Communication</div>
-          <RatingBar rating={props.averages.avgCommunication}></RatingBar>
+          <RatingAvg>
+          <RatingBar rating={props.averages.avgCommunication}/>
             {props.averages.avgCommunication}
+          </RatingAvg>
             </Rating>
     </div>
     <div>
           <Rating>
           <div>Location</div>
-          <RatingBar rating={props.averages.avgLocation}></RatingBar>
+          <RatingAvg>
+          <RatingBar rating={props.averages.avgLocation}/>
             {props.averages.avgLocation}
+          </RatingAvg>
             </Rating>
 
           <Rating>
           <div>Check-in</div>
-          <RatingBar rating={props.averages.avgCheckIn}></RatingBar>
+          <RatingAvg>
+          <RatingBar rating={props.averages.avgCheckIn}/>
             {props.averages.avgCheckIn}
+          </RatingAvg>
             </Rating>
 
           <Rating>
           <div>Value</div>
-          <RatingBar rating={props.averages.avgValue}></RatingBar>
+          <RatingAvg>
+          <RatingBar rating={props.averages.avgValue}/>
             {props.averages.avgValue}
+          </RatingAvg>
             </Rating>
     </div>
           </ContainerAvgs>

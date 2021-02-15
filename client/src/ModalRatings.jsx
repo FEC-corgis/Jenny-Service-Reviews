@@ -12,7 +12,7 @@ const ModalRatings = (props) => {
           <ModalRating>
           <div>Cleanliness</div>
             <ModalRatingAvg>
-            <RatingBar rating={props.averages.avgCleanliness}></RatingBar>
+            <RatingBar rating={props.averages.avgCleanliness}/>
               {props.averages.avgCleanliness}
               </ModalRatingAvg>
             </ModalRating>
@@ -20,7 +20,7 @@ const ModalRatings = (props) => {
             <ModalRating>
           <div>Accuracy</div>
           <ModalRatingAvg>
-          <RatingBar rating={props.averages.avgAccuracy}></RatingBar>
+          <RatingBar rating={props.averages.avgAccuracy}/>
             {props.averages.avgAccuracy}
             </ModalRatingAvg>
           </ModalRating>
@@ -28,7 +28,7 @@ const ModalRatings = (props) => {
           <ModalRating>
           <div >Communication</div>
           <ModalRatingAvg>
-          <RatingBar rating={props.averages.avgCommunication}></RatingBar>
+          <RatingBar rating={props.averages.avgCommunication}/>
             {props.averages.avgCommunication}
             </ModalRatingAvg>
             </ModalRating>
@@ -36,7 +36,7 @@ const ModalRatings = (props) => {
           <ModalRating>
           <div>Location</div>
           <ModalRatingAvg>
-          <RatingBar rating={props.averages.avgLocation}></RatingBar>
+          <RatingBar rating={props.averages.avgLocation}/>
             {props.averages.avgLocation}
             </ModalRatingAvg>
             </ModalRating>
@@ -44,7 +44,7 @@ const ModalRatings = (props) => {
           <ModalRating>
           <div>Check-in</div>
           <ModalRatingAvg>
-          <RatingBar rating={props.averages.avgCheckIn}></RatingBar>
+          <RatingBar rating={props.averages.avgCheckIn}/>
             {props.averages.avgCheckIn}
             </ModalRatingAvg>
             </ModalRating>
@@ -52,7 +52,7 @@ const ModalRatings = (props) => {
           <ModalRating>
           <div>Value</div>
           <ModalRatingAvg>
-          <RatingBar rating={props.averages.avgValue}></RatingBar>
+          <RatingBar rating={props.averages.avgValue}/>
             {props.averages.avgValue}
             </ModalRatingAvg>
           </ModalRating>
