@@ -2,7 +2,7 @@ import React from 'react';
 import Ratings from './Ratings.jsx'
 import ModalRatings from './ModalRatings.jsx'
 // import styled from 'styled-components';
-import Styles, { Overall, ModalContainerAvgs, PinkStar } from './Styles.js';
+import Styles, { Overall, ModalContainerAvgs, PinkStar, ModalOverall, ModalPinkStar } from './Styles.js';
 
 const Averages = (props) => {
     // console.log('avgs props test', this.props)
@@ -27,9 +27,9 @@ const Averages = (props) => {
       return (
         <div>
 
-          <Overall data-testid="overallTest">
-          <PinkStar/> {props.averages.avgOverall} ({props.reviewCount} reviews)
-          </Overall>
+          <ModalOverall data-testid="overallTest">
+          <ModalPinkStar/> {props.averages.avgOverall} ({props.reviewCount} reviews)
+          </ModalOverall>
 
           <ModalRatings
           averages={props.averages}

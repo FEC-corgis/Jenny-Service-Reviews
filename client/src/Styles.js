@@ -134,6 +134,17 @@ export const ModalX = window.styled.div`
 
 export const ModalAvgs = window.styled.div`
   grid-area: modal-avgs;
+  display: flex;
+`;
+
+export const ModalOverall = window.styled.div`
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: left;
+  margin: 20px;
 `;
 
 export const ModalSearch = window.styled.div`
@@ -191,4 +202,9 @@ margin-left: -100%;
 export const PinkStar = window.styled(Star)`
 color: #FF385C;
 width: 20px;
+`;
+
+export const ModalPinkStar = window.styled(Star)`
+color: #FF385C;
+width: 28px;
 `;
