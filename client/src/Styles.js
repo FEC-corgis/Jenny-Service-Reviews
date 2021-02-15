@@ -16,7 +16,7 @@ export const Container = window.styled.div`
 // AVERAGES
 
 export const Overall = window.styled.div`
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   text-align: left;
 `;
@@ -148,12 +148,24 @@ export const ModalOverall = window.styled.div`
   margin: 20px;
 `;
 
-export const ModalSearch = window.styled.div`
+export const ModalSearch = window.styled.form`
   grid-area: modal-search;
+  position: relative;
+  top: 20px;
+  background-color: whitesmoke;
+  width: 92%;
+  height: 40px;
+  border-radius: 30px;
+  border-style: solid;
+  border-color: gray;
+  border-width: 1px;
 `;
 
 export const ModalReviews = window.styled.div`
   grid-area: modal-reviews;
+  position: relative;
+  top: 10%;
+  height: 90%;
   overflow: scroll;
   text-align: left;
 `;

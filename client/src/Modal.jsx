@@ -26,9 +26,7 @@ const Modal = (props) => {
               </ModalAvgs>
 
               <ModalSearch>
-                <form>
                   <input type="text" name="search" placeholder="Search reviews"/>
-                </form>
               </ModalSearch>
 
               <ModalReviews data-testid="modalReviewsTest">
