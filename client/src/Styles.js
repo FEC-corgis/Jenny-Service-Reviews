@@ -150,15 +150,21 @@ export const ModalOverall = window.styled.div`
 
 export const ModalSearch = window.styled.form`
   grid-area: modal-search;
+`;
+
+export const ModalInput = window.styled.input`
   position: relative;
   top: 20px;
-  background-color: whitesmoke;
-  width: 92%;
-  height: 40px;
-  border-radius: 30px;
+  left: -15px;
   border-style: solid;
   border-color: gray;
+  border-radius: 30px;
   border-width: 1px;
+  background-color: whitesmoke;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  width: 93%;
+  height: 40px;
 `;
 
 export const ModalReviews = window.styled.div`

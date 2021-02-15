@@ -2,7 +2,7 @@ import React from 'react';
 import Averages from './Averages.jsx';
 import ReviewBlurb from './ReviewBlurb.jsx';
 // import styled from 'styled-components';
-import Styles, { ModalBackground, ModalBody, ModalX, ModalAvgs, ModalSearch, ModalReviews } from './Styles.js';
+import Styles, { ModalBackground, ModalBody, ModalX, ModalAvgs, ModalSearch, ModalReviews, ModalInput } from './Styles.js';
 
 const Modal = (props) => {
   const onClose = () => {
@@ -26,7 +26,7 @@ const Modal = (props) => {
               </ModalAvgs>
 
               <ModalSearch>
-                  <input type="text" name="search" placeholder="Search reviews"/>
+                  <ModalInput type="text" name="search" placeholder="Search reviews" autocomplete="off"/>
               </ModalSearch>
 
               <ModalReviews data-testid="modalReviewsTest">
