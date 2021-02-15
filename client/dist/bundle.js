@@ -9,6 +9,9 @@
   font-family: 'Nunito Sans', sans-serif;
   row-gap: 25px;
 `,Ve=window.styled.div`
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
   font-size: 22px;
   font-weight: 600;
   text-align: left;

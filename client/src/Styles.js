@@ -17,6 +17,9 @@ export const Container = window.styled.div`
 // AVERAGES
 
 export const Overall = window.styled.div`
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
   font-size: 22px;
   font-weight: 600;
   text-align: left;
