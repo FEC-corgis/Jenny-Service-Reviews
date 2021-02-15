@@ -32,7 +32,7 @@ line-height: 35px;
 
 export const Rating = window.styled.div`
   display: flex;
-  column-gap: 16vw;
+  column-gap: 17vw;
 `;
 
 export const RatingAvg = window.styled.div`
@@ -40,6 +40,7 @@ display: flex;
 align-items: center;
 column-gap: 10px;
 margin-left: auto;
+font-size: 12px;
 `;
 
 // REVIEWS
@@ -168,11 +169,15 @@ export const ModalRating = window.styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  line-height: 35px;
+  column-gap: 5vw;
 `;
 
 export const ModalRatingAvg = window.styled.div`
 display: flex;
 align-items: center;
+column-gap: 10px;
+font-size: 12px;
 `;
 
 // RATING BAR

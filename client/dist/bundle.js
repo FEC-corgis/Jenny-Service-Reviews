@@ -20,12 +20,13 @@ column-gap: 8vw;
 line-height: 35px;
 `,We=window.styled.div`
   display: flex;
-  column-gap: 16vw;
+  column-gap: 17vw;
 `,qe=window.styled.div`
 display: flex;
 align-items: center;
 column-gap: 10px;
 margin-left: auto;
+font-size: 12px;
 `,Qe=window.styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -112,9 +113,13 @@ flex-direction: column;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  line-height: 35px;
+  column-gap: 5vw;
 `,dt=window.styled.div`
 display: flex;
 align-items: center;
+column-gap: 10px;
+font-size: 12px;
 `,pt=window.styled.div`
 display: flex;
 width: 125px;
