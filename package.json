@@ -10,13 +10,14 @@
     "start": "nodemon ./server/index.js",
     "react-dev": "webpack --watch",
     "seed": "node database/seeding/seed.js",
-    "test": "jest --watchAll"
+    "test": "jest --runInBand --detectOpenHandles"
   },
   "dependencies": {
     "axios": "^0.21.1",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "jest-styled-components": "^7.0.3",
     "mysql": "^2.18.1",
     "mysql2": "^2.2.5",
     "react": "^17.0.1",
