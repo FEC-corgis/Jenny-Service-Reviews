@@ -1,39 +1,18 @@
-# Project Name
+# Airbnb Reviews App Clone
 
-> Project description
+> I built this project from scratch to clone an Airbnb product page "Reviews" module. It generates persisting averages, user, and reviews data that can be viewed via the endpoint PORT/rooms/:id (for id values 0-99). Made with full-stack js using MySQL, Express, React, and Node.
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/FEC-corgis/Jenny-Service-MorePlacesToStay
+  - https://github.com/FEC-corgis/Jenny-Proxy
 
-## Table of Contents
+## Setup on Local
 
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
+- git clone
+- install dependencies with `npm install`
+- seed database with `npm run seed`
+- start server with `npm run start`
+- view at PORT/rooms/:id (for id values 0-99)
 
-## Usage
-
-> Some usage instructions
-
-## Requirements
-
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
-- etc
-
-## Development
-
-### Installing Dependencies
-
-From within the root directory:
-
-```sh
-npm install -g webpack
-npm install
-```
-
+For setup with proxy, complete steps above and follow steps for [proxy](https://github.com/FEC-corgis/Jenny-Proxy).
