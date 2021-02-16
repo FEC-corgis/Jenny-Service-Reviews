@@ -1,6 +1,6 @@
 # Airbnb Reviews Clone
 
-I built this project from scratch to clone an Airbnb product page "Reviews" module. It generates persisting averages, user, and reviews data that can be viewed for 100 unique product ids. Made with full-stack js using MySQL, Express, React, and Node.
+I built this project from scratch to clone an Airbnb product page "Reviews" module. It generates persisting averages, user, and reviews data that can be viewed for 100 unique product ids. Made with full-stack js using MySQL, Express, React, and Node, tested with Jest, and deployed using Amazon EC2.
 
 ## Live Demo Links
 
