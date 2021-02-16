@@ -5,7 +5,7 @@ I built this project from scratch to clone an Airbnb product page "Reviews" modu
 ## Live Demo Links
 
   - Reviews: http://3.22.194.10:1984/rooms/80/
-  - Proxy (with Reviews and Recommendation apps): http://3.128.186.14:3000/rooms/80/
+  - Proxy: http://3.128.186.14:3000/rooms/80/
 
 ## Setup on Local
 
