@@ -2,10 +2,10 @@
 
 I built this project from scratch to clone an Airbnb product page "Reviews" module. It generates persisting averages, user, and reviews data that can be viewed for 100 unique product ids. Made with full-stack js using MySQL, Express, React, and Node.
 
-## Related Projects
+## Live Demo Links
 
-  - https://github.com/FEC-corgis/Jenny-Service-MorePlacesToStay
-  - https://github.com/FEC-corgis/Jenny-Proxy
+  - Reviews: http://3.22.194.10:1984/rooms/80/
+  - Proxy (with Reviews and Recommendation apps): http://3.128.186.14:3000/rooms/80/
 
 ## Setup on Local
 
@@ -16,3 +16,8 @@ I built this project from scratch to clone an Airbnb product page "Reviews" modu
 1. view at PORT/rooms/:id (for id values 0-99)
 
 For setup with proxy, complete steps above and follow steps for [proxy](https://github.com/FEC-corgis/Jenny-Proxy).
+
+## Related Projects
+
+  - https://github.com/FEC-corgis/Jenny-Service-MorePlacesToStay
+  - https://github.com/FEC-corgis/Jenny-Proxy
