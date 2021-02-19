@@ -2,10 +2,12 @@
 
 I built this project from scratch to clone an Airbnb product page "Reviews" module. It generates persisting averages, user, and reviews data that can be viewed for 100 unique product ids. Made with full-stack js using MySQL, Express, React, and Node, tested with Jest, and deployed using Amazon EC2.
 
-## Live Demo Links
+Click [here](https://drive.google.com/file/d/1mt6DU9qSAPfE5dULvrw0HqkH4PqjrBEu/view?usp=sharing) for demo!
 
-  - Reviews: http://3.22.194.10:1984/rooms/80/
-  - Proxy: http://3.128.186.14:3000/rooms/80/
+<!-- ## Live Demo Links
+
+  - Reviews: [link]
+  - Proxy: [link] -->
 
 ## Setup on Local
 
