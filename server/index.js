@@ -33,6 +33,8 @@ app.get('/reviews/morePlaces/:id', async (req, res) => {
     let data = {}
     let overallRating = await db.overall(id)
     data.overallRating = overallRating.avgOverall
+    let reviewsTotal = await db.total(id)
+    data.reviewsTotal = reviewsTotal
     res.send(data)
   } catch(e) {
     console.log(e)
