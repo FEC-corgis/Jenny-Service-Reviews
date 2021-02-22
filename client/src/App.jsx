@@ -5,7 +5,7 @@ import Averages from './Averages.jsx'
 import ReviewBlurb from './ReviewBlurb.jsx'
 import Modal from './Modal.jsx'
 // import styled from 'styled-components'
-import Styles, { Container, ContainerReviews, ModalButton, ModalButtonContainer } from './Styles.js'
+import Styles, { ContainerReviews, ModalButton, ModalButtonContainer, TestContainer, TestInnerContainer } from './Styles.js'
 
 const App = (props) => {
   const [averages, setAverages] = useState('')
@@ -40,38 +40,38 @@ const App = (props) => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
     return (
-      <Container>
+<TestContainer>
+  <TestInnerContainer>
 
-        <div>
-        <Averages
-        averages={averages}
-        reviewCount={reviewCount} />
-        </div>
+      <Averages
+      averages={averages}
+      reviewCount={reviewCount} />
 
-        <ContainerReviews>
-        {reviews6.map((review, index) =>
-        <ReviewBlurb
-        review={review}
-        users={users}
-        key={index}
-        /> )}
-        </ContainerReviews>
+      <ContainerReviews>
+      {reviews6.map((review, index) =>
+      <ReviewBlurb
+      review={review}
+      users={users}
+      key={index}
+      /> )}
+      </ContainerReviews>
 
-        <ModalButtonContainer>
-        <p></p>
-        <ModalButton data-testid="modalButtonTest" onClick={toggleModal}>Show all {reviewCount} reviews</ModalButton>
-        <Modal
-        visible={modal}
-        toggleModal={toggleModal}
-        averages={averages}
-        reviewCount={reviewCount}
-        reviewsAll={reviewsAll}
-        users={users}
-        data-testid="modalTest"
-        />
-        </ModalButtonContainer>
+     <ModalButtonContainer>
+     <p></p>
+     <ModalButton data-testid="modalButtonTest" onClick={toggleModal}>Show all {reviewCount} reviews</ModalButton>
+     <Modal
+     visible={modal}
+     toggleModal={toggleModal}
+     averages={averages}
+     reviewCount={reviewCount}
+     reviewsAll={reviewsAll}
+     users={users}
+     data-testid="modalTest"
+     />
+     </ModalButtonContainer>
+     </TestInnerContainer>
 
-      </Container>
+</TestContainer>
     )
 }
 

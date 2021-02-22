@@ -3,15 +3,17 @@ import { Star } from '@styled-icons/boxicons-solid/Star'
 
 // FRONT PAGE
 
-export const Container = window.styled.div`
-  display: grid;
-  justify-content: space-between;
-  font-family: Arial, Helvetica, sans-serif;
-  width: 80%;
-  margin-left: 5%;
-  margin-right: auto;
-  font-family: 'Nunito Sans', sans-serif;
-  row-gap: 25px;
+export const TestContainer = window.styled.div`
+display: flex;
+justify-content: center;
+`;
+
+export const TestInnerContainer = window.styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+font-family: Arial, Helvetica, sans-serif;
+font-family: 'Nunito Sans', sans-serif;
 `;
 
 // AVERAGES
@@ -27,12 +29,10 @@ export const Overall = window.styled.div`
 
 export const ContainerAvgs = window.styled.div`
 display: flex;
-width: 90vw;
-justify-content: left;
 grid-template-columns: repeat(4, 1fr);
 column-gap: 8vw;
 line-height: 35px;
-
+max-width: 1128px;
 `;
 
 export const Rating = window.styled.div`
@@ -65,6 +65,8 @@ export const ContainerUserReview = window.styled.div`
   grid-template-areas:
   "pic name"
   "desc desc";
+  max-width: 33%;
+
 `;
 
 export const Pic = window.styled.div`
@@ -111,6 +113,8 @@ flex-direction: column;
 
 export const ModalButtonContainer = window.styled.div`
 height: 125px;
+left: 0;
+margin-right: auto;
 `;
 
 export const ModalButton = window.styled.button`

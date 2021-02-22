@@ -6,7 +6,6 @@ import RatingBar from './RatingBar.jsx'
 
 const Ratings = (props) => {
   return (
-    <div className={props.className} data-testid="ratingsTest">
       <ContainerAvgs>
 <div>
           <Rating>
@@ -59,7 +58,6 @@ const Ratings = (props) => {
             </Rating>
     </div>
           </ContainerAvgs>
-    </div>
   )
 }
 
