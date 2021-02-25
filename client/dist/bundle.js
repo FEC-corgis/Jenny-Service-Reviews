@@ -23,7 +23,8 @@ line-height: 35px;
 max-width: 1128px;
 `,qe=window.styled.div`
   display: flex;
-  column-gap: 17vw;
+  // column-gap: 17vw;
+  column-gap: 200px;
   font-size: 17px;
   font-weight: 300;
 `,Qe=window.styled.div`
@@ -39,7 +40,8 @@ font-weight: 600;
   grid-template-rows: 1fr 1fr;
 `,Ke=window.styled.div`
   display: grid;
-  grid-template-columns: 0px 35vw;
+  // grid-template-columns: 0px 35vw;
+  grid-template-columns: 0px 28vw;
   grid-template-areas:
   "pic name"
   "desc desc";
