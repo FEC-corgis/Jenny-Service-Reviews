@@ -24,7 +24,7 @@ max-width: 1128px;
 `,qe=window.styled.div`
   display: flex;
   // column-gap: 17vw;
-  column-gap: 200px;
+  column-gap: 250px;
   font-size: 17px;
   font-weight: 300;
 `,Qe=window.styled.div`
@@ -41,7 +41,7 @@ font-weight: 600;
 `,Ke=window.styled.div`
   display: grid;
   // grid-template-columns: 0px 35vw;
-  grid-template-columns: 0px 28vw;
+  grid-template-columns: 0px 30vw;
   grid-template-areas:
   "pic name"
   "desc desc";
