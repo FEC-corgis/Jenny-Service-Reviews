@@ -6,14 +6,15 @@ const db = require('../database/db.js')
 const cors = require('cors')
 const path = require('path')
 
+app.use(compression())
 app.get('/bundle.js', (req, res)=> {
   res.sendFile(path.join(__dirname, '../client/dist/bundle.js'))
 })
 app.use('/rooms/:id', express.static('./client/dist'))
+// app.use('/rooms/:id', expressStaticGzip('./client/dist'))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(cors())
-app.use(compression())
 
 app.get('/reviews/propId/:id', async (req, res) => {
   const id = req.params.id
