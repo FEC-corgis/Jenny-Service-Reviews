@@ -14,6 +14,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(cors())
 app.use(compression())
+app.use(express.compress())
 
 app.get('/reviews/propId/:id', async (req, res) => {
   const id = req.params.id
