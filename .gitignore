@@ -2,4 +2,3 @@ node_modules
 .env
 *.pem
 bundleReviews.js
-bundleReviews3.js

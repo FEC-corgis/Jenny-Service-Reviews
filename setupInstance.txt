@@ -58,3 +58,7 @@ exit;
 
 // SEED DB
 
+// WHEN CHANGING IPS
+replace bash login script
+test new ip by pasting 'Public IPv4:PORT/rooms/:id' as url
+save new ip as bookmark
